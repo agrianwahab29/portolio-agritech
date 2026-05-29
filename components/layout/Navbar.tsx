@@ -34,10 +34,10 @@ export function Navbar() {
 
   return (
     <header
-      className={cn(
+        className={cn(
         "fixed inset-x-0 top-0 z-40 transition-all duration-300",
         scrolled
-          ? "glass border-b py-3 shadow-sm"
+          ? "border-b border-line bg-[var(--nav-bg)] backdrop-blur-xl shadow-sm py-3"
           : "bg-transparent py-5",
       )}
     >
@@ -106,8 +106,8 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t lg:hidden">
-          <div className="glass px-6 py-5">
+        <div className="border-t border-line lg:hidden">
+          <div className="bg-[var(--nav-bg)] backdrop-blur-xl px-6 py-5">
             <ul className="space-y-1">
               {navItems.map((item) => {
                 const active =

@@ -110,7 +110,7 @@ export function Hero() {
           </div>
 
           {/* Right: code card */}
-          <div data-h="visual" className="relative">
+          <div data-h="visual" className="relative w-full min-w-0">
             <div className="glass overflow-hidden rounded-card shadow-lg">
               <div className="flex items-center gap-2 border-b border-line bg-surface px-4 py-3">
                 <span className="h-2.5 w-2.5 rounded-full bg-danger/70" />
@@ -118,14 +118,15 @@ export function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-ok/70" />
                 <span className="ml-2 font-mono text-xs text-fg-muted">agrian.profile.ts</span>
               </div>
-              <pre className="overflow-x-auto p-5 font-mono text-[12.5px] leading-relaxed text-fg-secondary">
+              <pre className="overflow-x-auto p-5 font-mono text-[12px] leading-relaxed text-fg-secondary">
 <code><span className="text-fg-muted">const</span> <span className="text-brand-text">agrian</span> = {"{"}
-  role: <span className="text-ok">&quot;Web Developer&quot;</span>,
-  focus: [<span className="text-ok">&quot;Web&quot;</span>, <span className="text-ok">&quot;Sistem Info&quot;</span>],
-  projects: <span className="text-warn">4</span>, publications: <span className="text-warn">5</span>,
-  gpa: <span className="text-warn">3.80</span>, internship: <span className="text-ok">&quot;Kemenaker&quot;</span>,
-  available: <span className="text-brand-text">true</span>,
-{"}"};</code>
+{"\n  "}role: <span className="text-ok">&quot;Web Developer&quot;</span>,
+{"\n  "}focus: [<span className="text-ok">&quot;Web&quot;</span>, <span className="text-ok">&quot;Sistem&quot;</span>],
+{"\n  "}projects: <span className="text-warn">4</span>,
+{"\n  "}publications: <span className="text-warn">5</span>,
+{"\n  "}gpa: <span className="text-warn">3.80</span>,
+{"\n  "}available: <span className="text-brand-text">true</span>,
+{"\n"}{"}"};</code>
               </pre>
             </div>
             {/* Floating tech pills */}
