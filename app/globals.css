@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #050816;
+    --bg-secondary: #0B1020;
+    --bg-tertiary: #111827;
+    --surface-card: rgba(255, 255, 255, 0.06);
+    --surface-card-hover: rgba(255, 255, 255, 0.10);
+    --surface-border: rgba(255, 255, 255, 0.12);
+    --surface-border-hover: rgba(255, 255, 255, 0.20);
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --accent-blue: #38BDF8;
+    --accent-cyan: #22D3EE;
+    --accent-purple: #A78BFA;
+    --accent-emerald: #34D399;
+    --glow-blue: rgba(56, 189, 248, 0.35);
+    --glow-purple: rgba(167, 139, 250, 0.30);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-secondary antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.25);
+    color: #F8FAFC;
+  }
+
+  /* Focus ring global */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-blue;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: var(--surface-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--surface-border);
+    border-radius: 20px;
+  }
+
+  .glass-card:hover {
+    background: var(--surface-card-hover);
+    border-color: var(--surface-border-hover);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
