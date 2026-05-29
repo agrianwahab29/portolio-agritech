@@ -10,9 +10,8 @@ export function Card({ children, className, hoverable = true }: CardProps) {
   return (
     <div
       className={cn(
-        "glass-card p-6 md:p-8 transition-all duration-300",
-        hoverable &&
-          "hover:-translate-y-1 hover:shadow-glow-blue",
+        "glass rounded-card p-6 md:p-7",
+        hoverable && "glass-hover hover:-translate-y-1 hover:shadow-glow",
         className,
       )}
     >

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectFilter } from "@/components/projects/ProjectFilter";
@@ -18,17 +19,17 @@ export default function ProjectsPage() {
   return (
     <>
       <Navbar />
-      <div className="pt-32">
+      <Section size="lg" className="pt-28">
         <Container>
           <SectionHeading
             eyebrow="Projects"
             title="Semua proyek AgrianTech"
             description="Kumpulan proyek web portal dan sistem informasi yang telah dibangun dan dipublikasikan."
-            className="mb-12"
+            className="mb-10 md:mb-12"
           />
           <ProjectFilter projects={sorted} />
         </Container>
-      </div>
+      </Section>
       <Footer />
     </>
   );

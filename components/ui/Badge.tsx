@@ -2,23 +2,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center gap-1.5 rounded-full border font-medium transition-colors",
+  "inline-flex items-center gap-1.5 rounded-full border font-medium",
   {
     variants: {
       variant: {
-        tech: "border-accent-blue/30 bg-accent-blue/5 text-accent-blue font-mono",
-        category:
-          "border-white/10 bg-white/5 text-text-secondary",
-        year: "border-transparent bg-transparent text-text-muted",
-        status: "border-current",
-      },
-      status: {
-        none: "",
-        published: "text-status-published bg-status-published/10",
-        "in-press": "text-status-in-press bg-status-in-press/10",
-        completed: "text-status-completed bg-status-completed/10",
-        archived: "text-status-archived bg-status-archived/10",
-        accepted: "text-status-in-press bg-status-in-press/10",
+        tech: "border-brand/25 bg-brand/[0.06] text-brand-text font-mono",
+        category: "border-line bg-surface text-fg-secondary",
+        year: "border-transparent bg-transparent text-fg-muted",
+        ok: "border-ok/30 bg-ok/10 text-ok",
+        warn: "border-warn/30 bg-warn/10 text-warn",
+        info: "border-info/30 bg-info/10 text-info",
+        muted: "border-line bg-surface text-fg-muted",
       },
       size: {
         sm: "px-2.5 py-0.5 text-[11px]",
@@ -27,7 +21,6 @@ const badgeVariants = cva(
     },
     defaultVariants: {
       variant: "category",
-      status: "none",
       size: "md",
     },
   },
@@ -38,18 +31,21 @@ type BadgeProps = {
   className?: string;
 } & VariantProps<typeof badgeVariants>;
 
-export function Badge({
-  children,
-  className,
-  variant,
-  status,
-  size,
-}: BadgeProps) {
+export function Badge({ children, className, variant, size }: BadgeProps) {
   return (
-    <span
-      className={cn(badgeVariants({ variant, status, size }), className)}
-    >
+    <span className={cn(badgeVariants({ variant, size }), className)}>
       {children}
     </span>
   );
+}
+
+// Map publication/project status string to badge variant
+export function statusVariant(
+  status: string,
+): "ok" | "warn" | "info" | "muted" {
+  const s = status.toLowerCase();
+  if (s === "published") return "ok";
+  if (s === "accepted" || s === "in press" || s === "in-press") return "warn";
+  if (s === "completed" || s === "case study") return "info";
+  return "muted";
 }

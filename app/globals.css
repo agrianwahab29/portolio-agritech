@@ -2,65 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  AgrianTech Design System
+  Theme-aware tokens. Dark is default; [data-theme="light"] overrides.
+  All theme-dependent colors are CSS variables so components stay theme-agnostic.
+*/
+
 @layer base {
-  :root {
+  :root,
+  [data-theme="dark"] {
     --bg-primary: #050816;
-    --bg-secondary: #0B1020;
-    --bg-tertiary: #111827;
-    --surface-card: rgba(255, 255, 255, 0.06);
-    --surface-card-hover: rgba(255, 255, 255, 0.10);
-    --surface-border: rgba(255, 255, 255, 0.12);
-    --surface-border-hover: rgba(255, 255, 255, 0.20);
-    --text-primary: #F8FAFC;
-    --text-secondary: #CBD5E1;
-    --text-muted: #94A3B8;
-    --accent-blue: #38BDF8;
-    --accent-cyan: #22D3EE;
-    --accent-purple: #A78BFA;
-    --accent-emerald: #34D399;
-    --glow-blue: rgba(56, 189, 248, 0.35);
-    --glow-purple: rgba(167, 139, 250, 0.30);
+    --bg-secondary: #0a0f20;
+    --bg-tertiary: #111a30;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #c3cee0;
+    --text-muted: #8a98b0;
+
+    --surface: rgba(255, 255, 255, 0.045);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --line: rgba(255, 255, 255, 0.1);
+    --line-hover: rgba(255, 255, 255, 0.2);
+
+    --accent: #38bdf8;
+    --accent-strong: #22d3ee;
+    --accent-text: #7dd3fc;
+    --accent-contrast: #050816;
+
+    --grad-from: #38bdf8;
+    --grad-via: #22d3ee;
+    --grad-to: #a78bfa;
+
+    --glow: rgba(56, 189, 248, 0.22);
+    --shadow-color: 0deg 0% 0%;
+
+    --grid-line: rgba(255, 255, 255, 0.04);
+    --radial-1: rgba(56, 189, 248, 0.16);
+    --radial-2: rgba(167, 139, 250, 0.14);
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #fbfcff;
+    --bg-secondary: #f1f5fb;
+    --bg-tertiary: #ffffff;
+
+    --text-primary: #0b1220;
+    --text-secondary: #3a4659;
+    --text-muted: #5d6b80;
+
+    --surface: rgba(15, 23, 42, 0.025);
+    --surface-hover: rgba(15, 23, 42, 0.05);
+    --line: rgba(15, 23, 42, 0.1);
+    --line-hover: rgba(15, 23, 42, 0.18);
+
+    --accent: #0369a1;
+    --accent-strong: #0e7490;
+    --accent-text: #0369a1;
+    --accent-contrast: #ffffff;
+
+    --grad-from: #0ea5e9;
+    --grad-via: #0891b2;
+    --grad-to: #7c3aed;
+
+    --glow: rgba(2, 132, 199, 0.18);
+    --shadow-color: 220deg 40% 45%;
+
+    --grid-line: rgba(15, 23, 42, 0.04);
+    --radial-1: rgba(14, 165, 233, 0.12);
+    --radial-2: rgba(124, 58, 237, 0.1);
+  }
+
+  * {
+    border-color: var(--line);
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   body {
-    @apply bg-bg-primary text-text-secondary antialiased;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   ::selection {
-    background: rgba(56, 189, 248, 0.25);
-    color: #F8FAFC;
+    background: var(--glow);
+    color: var(--text-primary);
   }
 
-  /* Focus ring global */
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-accent-blue;
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Anchor offset for sticky navbar */
+  section[id] {
+    scroll-margin-top: 88px;
   }
 }
 
 @layer components {
-  .glass-card {
-    background: var(--surface-card);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--surface-border);
-    border-radius: 20px;
+  .glass {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
   }
 
-  .glass-card:hover {
-    background: var(--surface-card-hover);
-    border-color: var(--surface-border-hover);
+  .glass-hover {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease,
+      background-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .glass-hover:hover {
+    background: var(--surface-hover);
+    border-color: var(--line-hover);
   }
 
   .gradient-text {
-    @apply bg-gradient-text bg-clip-text text-transparent;
-  }
-
-  .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    background-image: linear-gradient(
+      120deg,
+      var(--grad-from),
+      var(--grad-via),
+      var(--grad-to)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }
 
@@ -75,5 +158,22 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+  }
+
+  /* Subtle dotted grid background for depth */
+  .bg-grid {
+    background-image: radial-gradient(
+      var(--grid-line) 1px,
+      transparent 1px
+    );
+    background-size: 32px 32px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
   }
 }

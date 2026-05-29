@@ -3,22 +3,22 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-button font-medium transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-blue disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 rounded-button font-medium transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]",
   {
     variants: {
       variant: {
         primary:
-          "bg-gradient-hero text-bg-primary font-semibold hover:shadow-glow-blue",
+          "bg-gradient-hero text-brand-contrast font-semibold hover:shadow-glow",
         secondary:
-          "glass-card text-text-primary hover:brightness-125",
+          "glass glass-hover text-fg-primary",
         ghost:
-          "text-text-secondary hover:bg-white/5 hover:text-text-primary",
-        link: "text-accent-blue underline-offset-4 hover:underline",
+          "text-fg-secondary hover:bg-surface-hover hover:text-fg-primary",
+        link: "text-brand-text underline-offset-4 hover:underline px-0",
       },
       size: {
         sm: "h-9 px-4 text-sm",
-        md: "h-11 px-6 text-sm",
-        lg: "h-12 px-8 text-base",
+        md: "h-11 px-5 text-sm",
+        lg: "h-12 px-7 text-base",
       },
     },
     defaultVariants: {
@@ -33,6 +33,7 @@ type ButtonProps = {
   className?: string;
   href?: string;
   external?: boolean;
+  download?: boolean;
 } & VariantProps<typeof buttonVariants> &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -43,17 +44,19 @@ export function Button({
   size,
   href,
   external,
+  download,
   ...props
 }: ButtonProps) {
   const classes = cn(buttonVariants({ variant, size }), className);
 
   if (href) {
-    if (external) {
+    if (external || download) {
       return (
         <a
           href={href}
-          target="_blank"
-          rel="noopener noreferrer"
+          download={download}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
           className={classes}
         >
           {children}

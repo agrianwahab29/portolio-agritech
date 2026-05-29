@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { profile } from "@/data/profile";
 
 const navItems = [
@@ -21,7 +22,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 50);
+    const handler = () => setScrolled(window.scrollY > 32);
     handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
@@ -36,33 +37,36 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-40 transition-all duration-300",
         scrolled
-          ? "border-b border-white/10 bg-bg-primary/80 backdrop-blur-glass py-3"
-          : "bg-transparent py-6",
+          ? "glass border-b py-3 shadow-sm"
+          : "bg-transparent py-5",
       )}
     >
       <nav
-        className="mx-auto flex max-w-container items-center justify-between px-6 md:px-12"
+        className="mx-auto flex max-w-content items-center justify-between px-6 lg:px-8"
         aria-label="Main navigation"
       >
         <Link
           href="/"
-          className="font-heading text-lg font-bold tracking-tight text-text-primary transition-colors hover:text-accent-blue"
+          className="font-heading text-lg font-bold tracking-tight text-fg-primary transition-colors hover:text-brand"
         >
           {profile.brand}
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        {/* Desktop nav */}
+        <ul className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
-            const active = pathname === item.href;
+            const active =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href));
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors",
+                    "rounded-button px-3.5 py-2 text-sm font-medium transition-colors",
                     active
-                      ? "text-accent-blue"
-                      : "text-text-secondary hover:text-text-primary",
+                      ? "bg-surface text-brand-text"
+                      : "text-fg-muted hover:bg-surface-hover hover:text-fg-primary",
                   )}
                   aria-current={active ? "page" : undefined}
                 >
@@ -73,34 +77,42 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
           <a
             href={profile.cvUrl}
             download
-            className="inline-flex items-center gap-2 rounded-button bg-gradient-hero px-5 py-2.5 text-sm font-semibold text-bg-primary transition-all hover:shadow-glow-blue active:scale-[0.98]"
+            className="inline-flex items-center gap-2 rounded-button bg-gradient-hero px-4 py-2 text-sm font-semibold text-brand-contrast transition-all hover:shadow-glow active:scale-[0.97]"
           >
-            <Download size={16} />
+            <Download size={15} />
             Download CV
           </a>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setMobileOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-button text-text-primary lg:hidden"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-1 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setMobileOpen((v) => !v)}
+            className="flex h-10 w-10 items-center justify-center rounded-button text-fg-primary"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
+      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden">
-          <div className="border-t border-white/10 bg-bg-primary/95 backdrop-blur-glass">
-            <ul className="space-y-1 px-6 py-6">
+        <div className="border-t lg:hidden">
+          <div className="glass px-6 py-5">
+            <ul className="space-y-1">
               {navItems.map((item) => {
-                const active = pathname === item.href;
+                const active =
+                  pathname === item.href ||
+                  (item.href !== "/" && pathname.startsWith(item.href));
                 return (
                   <li key={item.href}>
                     <Link
@@ -108,8 +120,8 @@ export function Navbar() {
                       className={cn(
                         "block rounded-button px-4 py-3 text-base font-medium transition-colors",
                         active
-                          ? "bg-accent-blue/10 text-accent-blue"
-                          : "text-text-secondary hover:bg-white/5",
+                          ? "bg-surface text-brand-text"
+                          : "text-fg-secondary hover:bg-surface-hover",
                       )}
                     >
                       {item.label}
@@ -117,13 +129,13 @@ export function Navbar() {
                   </li>
                 );
               })}
-              <li className="pt-4">
+              <li className="pt-3">
                 <a
                   href={profile.cvUrl}
                   download
-                  className="flex w-full items-center justify-center gap-2 rounded-button bg-gradient-hero px-5 py-3 text-sm font-semibold text-bg-primary"
+                  className="flex w-full items-center justify-center gap-2 rounded-button bg-gradient-hero px-5 py-3 text-sm font-semibold text-brand-contrast"
                 >
-                  <Download size={16} />
+                  <Download size={15} />
                   Download CV
                 </a>
               </li>

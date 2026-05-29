@@ -3,22 +3,23 @@ import { cn } from "@/lib/utils";
 type ContainerProps = {
   children: React.ReactNode;
   className?: string;
-  as?: keyof React.JSX.IntrinsicElements;
+  size?: "default" | "narrow";
 };
 
 export function Container({
   children,
   className,
-  as: Tag = "div",
+  size = "default",
 }: ContainerProps) {
   return (
-    <Tag
+    <div
       className={cn(
-        "mx-auto w-full max-w-container px-6 md:px-12",
+        "mx-auto w-full px-6 lg:px-8",
+        size === "default" ? "max-w-content" : "max-w-prose",
         className,
       )}
     >
       {children}
-    </Tag>
+    </div>
   );
 }

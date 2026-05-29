@@ -1,5 +1,6 @@
+import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { Badge } from "@/components/ui/Badge";
+import { Badge, statusVariant } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { FadeUp } from "@/components/animations/FadeUp";
 import { ExternalLink, Check } from "lucide-react";
@@ -10,70 +11,58 @@ export function CaseStudyHighlight() {
   if (!sepadan) return null;
 
   return (
-    <section className="section-padding bg-bg-secondary/40">
+    <Section size="md" className="bg-bg-secondary/50">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <FadeUp className="space-y-6">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+          <FadeUp className="space-y-5">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="tech" size="sm">CASE STUDY</Badge>
-              <Badge variant="status" status="published" size="sm">
+              <Badge variant={statusVariant(sepadan.status)} size="sm">
                 Flagship
               </Badge>
             </div>
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-text-primary md:text-5xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-fg-primary md:text-4xl">
               <span className="gradient-text">SEPADAN</span>
             </h2>
-            <p className="text-lg text-text-secondary">{sepadan.summary}</p>
-            <div className="space-y-3">
+            <p className="text-base text-fg-secondary">{sepadan.summary}</p>
+            <div className="space-y-2.5">
               {sepadan.features.slice(0, 5).map((f) => (
-                <div key={f} className="flex items-start gap-3">
-                  <Check size={18} className="mt-0.5 shrink-0 text-accent-emerald" />
-                  <span className="text-sm text-text-secondary">{f}</span>
+                <div key={f} className="flex items-start gap-2.5">
+                  <Check size={16} className="mt-0.5 shrink-0 text-ok" />
+                  <span className="text-sm text-fg-secondary">{f}</span>
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap gap-3 pt-4">
-              <Button href={`/projects/${sepadan.slug}`} size="lg">
-                View Full Case Study
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Button href={`/projects/${sepadan.slug}`} size="md">
+                View Case Study
               </Button>
               {sepadan.demoUrl && (
-                <Button href={sepadan.demoUrl} variant="secondary" size="lg" external>
-                  <ExternalLink size={18} />
+                <Button href={sepadan.demoUrl} variant="secondary" size="md" external>
+                  <ExternalLink size={16} />
                   Live Demo
                 </Button>
               )}
             </div>
           </FadeUp>
 
-          <FadeUp delay={0.2}>
-            <div className="glass-card aspect-square space-y-4 p-8">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-card bg-accent-blue/10 p-4">
-                  <p className="text-xs uppercase tracking-wider text-text-muted">
-                    Problem
-                  </p>
-                  <p className="mt-2 text-sm text-text-primary">
-                    Pencatatan manual, audit trail tidak ada
-                  </p>
+          <FadeUp delay={0.15}>
+            <div className="glass rounded-card p-6 space-y-4">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-card bg-brand/[0.06] p-4">
+                  <p className="text-[10px] uppercase tracking-wider text-fg-muted">Problem</p>
+                  <p className="mt-1.5 text-sm text-fg-primary">Pencatatan manual, audit trail tidak ada</p>
                 </div>
-                <div className="rounded-card bg-accent-purple/10 p-4">
-                  <p className="text-xs uppercase tracking-wider text-text-muted">
-                    Solution
-                  </p>
-                  <p className="mt-2 text-sm text-text-primary">
-                    Sistem terintegrasi dengan workflow approval
-                  </p>
+                <div className="rounded-card bg-[var(--grad-to)]/[0.06] p-4">
+                  <p className="text-[10px] uppercase tracking-wider text-fg-muted">Solution</p>
+                  <p className="mt-1.5 text-sm text-fg-primary">Sistem terintegrasi + workflow approval</p>
                 </div>
               </div>
-              <div className="rounded-card bg-accent-emerald/10 p-4">
-                <p className="text-xs uppercase tracking-wider text-text-muted">
-                  Result
-                </p>
-                <p className="mt-2 text-sm text-text-primary">
-                  {sepadan.result}
-                </p>
+              <div className="rounded-card bg-ok/[0.06] p-4">
+                <p className="text-[10px] uppercase tracking-wider text-fg-muted">Result</p>
+                <p className="mt-1.5 text-sm text-fg-primary">{sepadan.result}</p>
               </div>
-              <div className="flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-2 pt-1">
                 {sepadan.techStack.map((t) => (
                   <Badge key={t} variant="tech" size="sm">{t}</Badge>
                 ))}
@@ -82,6 +71,6 @@ export function CaseStudyHighlight() {
           </FadeUp>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

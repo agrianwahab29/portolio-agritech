@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { siteConfig } from "@/lib/constants";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { ThemeScript } from "@/components/layout/ThemeScript";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,12 +15,14 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
   display: "swap",
+  weight: ["500", "600", "700", "800"],
 });
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
   display: "swap",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -58,13 +61,18 @@ export default function RootLayout({
   return (
     <html
       lang="id"
+      data-theme="dark"
+      suppressHydrationWarning
       className={`${inter.variable} ${jakarta.variable} ${jetbrains.variable}`}
     >
-      <body className="min-h-screen font-sans">
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="min-h-screen font-sans antialiased">
         <ScrollProgress />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-accent-blue focus:px-4 focus:py-2 focus:text-bg-primary focus:outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-button focus:bg-brand focus:px-4 focus:py-2 focus:text-brand-contrast focus:outline-none"
         >
           Skip to content
         </a>

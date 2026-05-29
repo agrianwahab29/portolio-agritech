@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
@@ -10,62 +11,73 @@ const highlights = ["Web Development", "Sistem Informasi", "AI-Assisted Dev"];
 
 export function AboutPreview() {
   return (
-    <section className="section-padding">
+    <Section size="md">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <FadeUp className="space-y-6">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-12">
+          <FadeUp>
             <SectionHeading
               eyebrow="About AgrianTech"
               title="Membangun solusi digital yang rapi dan fungsional"
+              description={profile.bio.substring(0, 240) + "..."}
             />
-            <p className="text-base leading-relaxed text-text-secondary md:text-lg">
-              {profile.bio}
-            </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap gap-2">
               {highlights.map((h) => (
-                <Badge key={h} variant="category">
-                  {h}
-                </Badge>
+                <Badge key={h} variant="category">{h}</Badge>
               ))}
             </div>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent-blue transition-colors hover:text-accent-cyan"
+              className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-brand-text transition-all hover:gap-2"
             >
               Read more about me
-              <ArrowRight size={16} />
+              <ArrowRight size={15} />
             </Link>
           </FadeUp>
 
-          <FadeUp delay={0.2} className="glass-card p-8">
-            <div className="space-y-6">
-              <div>
-                <p className="text-xs uppercase tracking-wider text-text-muted">
-                  Education
-                </p>
-                <p className="mt-1 font-heading text-lg font-semibold text-text-primary">
-                  {profile.education.degree}
-                </p>
-                <p className="text-sm text-text-secondary">
-                  {profile.education.university}
-                </p>
-                <p className="text-sm text-text-muted">
-                  {profile.education.period} &middot; GPA {profile.education.gpa}
-                </p>
-              </div>
-              <div className="h-px bg-white/10" />
-              <div>
-                <p className="text-xs uppercase tracking-wider text-text-muted">
-                  Location
-                </p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  {profile.location}
-                </p>
+          <FadeUp delay={0.15}>
+            <div className="glass rounded-card p-6 md:p-7">
+              <div className="space-y-5">
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted">
+                    Education
+                  </p>
+                  <p className="mt-1.5 font-heading text-base font-semibold text-fg-primary">
+                    {profile.education.degree}
+                  </p>
+                  <p className="text-sm text-fg-secondary">{profile.education.university}</p>
+                  <p className="text-xs text-fg-muted">
+                    {profile.education.period} · GPA {profile.education.gpa}
+                  </p>
+                </div>
+                <div className="h-px bg-line" />
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted">
+                    Latest Role
+                  </p>
+                  <p className="mt-1.5 font-heading text-base font-semibold text-fg-primary">
+                    Pengolah Data dan Informasi
+                  </p>
+                  <p className="text-sm text-fg-secondary">
+                    Balai Bahasa Provinsi Sulawesi Tenggara
+                  </p>
+                  <p className="text-xs text-fg-muted">
+                    Magang Hub Kemenaker · 6 Bulan
+                  </p>
+                </div>
+                <div className="h-px bg-line" />
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted">
+                    Location
+                  </p>
+                  <p className="mt-1.5 text-sm text-fg-secondary">
+                    {profile.location}
+                  </p>
+                </div>
               </div>
             </div>
           </FadeUp>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

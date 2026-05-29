@@ -1,3 +1,4 @@
+import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StaggerReveal } from "@/components/animations/StaggerReveal";
@@ -25,29 +26,34 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Services() {
   return (
-    <section className="section-padding">
+    <Section size="md">
       <Container>
         <SectionHeading
           eyebrow="Services"
-          title="What I Can Build"
-          description="Saya dapat membantu membangun website dan sistem digital untuk kebutuhan bisnis dan instansi."
-          className="mb-12"
+          title="What I can build"
+          description="Membantu membangun website dan sistem digital untuk kebutuhan bisnis dan instansi."
+          className="mb-10 md:mb-12"
         />
-        <StaggerReveal className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerReveal className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = iconMap[service.icon];
             return (
-              <div key={service.id} className="glass-card p-6 space-y-3">
-                {Icon && <Icon size={28} className="text-accent-cyan" />}
-                <h3 className="font-heading text-base font-semibold text-text-primary">
+              <div
+                key={service.id}
+                className="group glass glass-hover rounded-card p-5 md:p-6"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-button bg-brand/[0.08] text-brand transition-transform duration-300 group-hover:scale-110">
+                  {Icon && <Icon size={20} />}
+                </span>
+                <h3 className="mt-4 font-heading text-base font-semibold text-fg-primary">
                   {service.title}
                 </h3>
-                <p className="text-sm text-text-muted">{service.description}</p>
+                <p className="mt-1.5 text-sm text-fg-muted">{service.description}</p>
               </div>
             );
           })}
         </StaggerReveal>
       </Container>
-    </section>
+    </Section>
   );
 }

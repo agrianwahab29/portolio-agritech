@@ -4,12 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { profile } from "@/data/profile";
 import { socials } from "@/data/socials";
 
-const iconMap = {
-  Mail,
-  Linkedin,
-  MessageCircle,
-  Github,
-};
+const iconMap = { Mail, Linkedin, MessageCircle, Github };
 
 const navLinks = [
   { label: "Projects", href: "/projects" },
@@ -21,26 +16,24 @@ const navLinks = [
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-24 border-t border-white/10 bg-bg-secondary">
-      <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-3">
-          <div className="space-y-3">
-            <h3 className="font-heading text-xl font-bold text-text-primary">
-              {profile.brand}
-            </h3>
-            <p className="text-sm text-text-muted">{profile.tagline}</p>
+    <footer className="border-t border-line bg-bg-secondary/40">
+      <Container className="py-12">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div className="space-y-2">
+            <h3 className="font-heading text-base font-bold text-fg-primary">{profile.brand}</h3>
+            <p className="text-sm text-fg-muted">{profile.tagline}</p>
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-text-muted">
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-fg-muted">
               Navigate
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-text-secondary transition-colors hover:text-accent-blue"
+                    className="text-sm text-fg-secondary transition-colors hover:text-brand-text"
                   >
                     {link.label}
                   </Link>
@@ -50,10 +43,10 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-text-muted">
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-fg-muted">
               Connect
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5">
               {socials.map((s) => {
                 const Icon = iconMap[s.icon as keyof typeof iconMap];
                 return (
@@ -62,9 +55,9 @@ export function Footer() {
                       href={s.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-accent-blue"
+                      className="inline-flex items-center gap-2 text-sm text-fg-secondary transition-colors hover:text-brand-text"
                     >
-                      {Icon ? <Icon size={14} /> : null}
+                      {Icon ? <Icon size={13} /> : null}
                       {s.platform}
                     </a>
                   </li>
@@ -74,11 +67,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center">
-          <p className="text-xs text-text-muted">
-            &copy; {year} {profile.brand} — Agrian Wahab. All rights reserved.
+        <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-line pt-5 md:flex-row md:items-center">
+          <p className="text-xs text-fg-muted">
+            © {year} {profile.brand} — Agrian Wahab.
           </p>
-          <p className="text-xs text-text-muted">
+          <p className="text-xs text-fg-muted">
             Built with Next.js, GSAP, and Tailwind CSS.
           </p>
         </div>
