@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "Manajemen pengguna dengan role",
       "Notifikasi permintaan & persetujuan",
     ],
-    thumbnail: "/images/projects/sepadan.webp",
+    thumbnail: "/images/projects/sepadan.png",
     demoUrl: "https://slide.kemendikdasmen.go.id/sepadan/",
     tags: ["inventory", "workflow", "government", "full-stack"],
     result:
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       "UI akses informasi yang ramah pengguna",
       "Pencarian kata lintas bahasa",
     ],
-    thumbnail: "/images/projects/portal-kamus.webp",
+    thumbnail: "/images/projects/portal-kamus.png",
     demoUrl: "https://slide.kemendikdasmen.go.id/kamus-bbst-sultra/",
     tags: ["portal", "education", "government", "multi-language"],
     result:
@@ -102,7 +102,7 @@ export const projects: Project[] = [
       "Desain ramah pengguna",
       "Cocok untuk edukasi formal dan informal",
     ],
-    thumbnail: "/images/projects/kamus-bergambar.webp",
+    thumbnail: "/images/projects/kamus-bergambar.png",
     demoUrl: "https://slide.kemendikdasmen.go.id/kamusbergambar-sultra/",
     tags: ["education", "visual-learning", "government", "children"],
     result:
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       "Relevan untuk perpustakaan instansi",
       "Audit trail aktivitas pengguna",
     ],
-    thumbnail: "/images/projects/inventaris-buku.webp",
+    thumbnail: "/images/projects/inventaris-buku.png",
     demoUrl: "https://slide.kemendikdasmen.go.id/inventaris-buku-bbst/",
     tags: ["inventory", "library", "government", "full-stack"],
     result:

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ExternalLink } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -73,6 +74,18 @@ export default async function ProjectDetailPage({ params }: { params: Params }) 
               </Button>
             )}
           </header>
+
+          {/* Hero screenshot */}
+          <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden rounded-card border border-line bg-bg-tertiary shadow-lg md:aspect-[2/1]">
+            <Image
+              src={project.thumbnail}
+              alt={`Tampilan ${project.title}`}
+              fill
+              sizes="(max-width: 1120px) 100vw, 1120px"
+              className="object-cover object-top"
+              priority
+            />
+          </div>
 
           <div className="grid gap-10 lg:grid-cols-[2fr_1fr]">
             <div className="space-y-10">
