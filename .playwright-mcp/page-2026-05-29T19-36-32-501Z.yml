@@ -1,0 +1,565 @@
+- generic [active] [ref=e1]:
+  - progressbar "Page scroll progress"
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - navigation "Main navigation" [ref=e5]:
+      - link "AgrianTech" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "Projects" [ref=e11] [cursor=pointer]:
+            - /url: /projects
+        - listitem [ref=e12]:
+          - link "About" [ref=e13] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e14]:
+          - link "Publications" [ref=e15] [cursor=pointer]:
+            - /url: /publications
+        - listitem [ref=e16]:
+          - link "Contact" [ref=e17] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e18]:
+        - button "Toggle theme" [ref=e19] [cursor=pointer]:
+          - img
+          - img
+        - link "Download CV" [ref=e20] [cursor=pointer]:
+          - /url: /cv/CV_Agrian_Wahab.pdf
+          - img [ref=e21]
+          - text: Download CV
+    - generic [ref=e24]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: Open to opportunities
+          - heading "Agrian Wahab" [level=1] [ref=e32]
+          - paragraph [ref=e33]: Web Developer & System Information Developer
+          - paragraph [ref=e34]: Saya membangun website modern, sistem informasi, dan solusi digital yang rapi, fungsional, terdokumentasi, dan mudah digunakan.
+          - generic [ref=e35]:
+            - link "View Projects" [ref=e37] [cursor=pointer]:
+              - /url: /projects
+              - text: View Projects
+              - img [ref=e38]
+            - link "Download CV" [ref=e40] [cursor=pointer]:
+              - /url: /cv/CV_Agrian_Wahab.pdf
+              - img [ref=e41]
+              - text: Download CV
+          - generic [ref=e44]:
+            - generic [ref=e45]: Connect
+            - link "LinkedIn" [ref=e47] [cursor=pointer]:
+              - /url: https://linkedin.com/in/agrian-wahab-7695b32a4/
+              - img [ref=e48]
+            - link "GitHub" [ref=e52] [cursor=pointer]:
+              - /url: https://github.com/agrianwahab29
+              - img [ref=e53]
+            - link "Email" [ref=e56] [cursor=pointer]:
+              - /url: mailto:agrianwahab10@gmail.com
+              - img [ref=e57]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e66]: agrian.profile.ts
+            - code [ref=e68]: "const agrian = { role: \"Web Developer\", focus: [\"Web\", \"Sistem\"], projects: 4, publications: 5, gpa: 3.80, available: true, };"
+          - generic [ref=e69]:
+            - generic [ref=e70]: Next.js
+            - generic [ref=e71]: TypeScript
+            - generic [ref=e72]: GSAP
+            - generic [ref=e73]: Tailwind
+            - generic [ref=e74]: Laravel
+      - img [ref=e76]
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - img [ref=e82]
+        - generic [ref=e86]: 0.00/4.00
+        - paragraph [ref=e87]: GPA Teknik Informatika
+      - generic [ref=e88]:
+        - img [ref=e89]
+        - generic [ref=e92]: "0"
+        - paragraph [ref=e93]: Live Web Projects
+      - generic [ref=e94]:
+        - img [ref=e95]
+        - generic [ref=e97]: "0"
+        - paragraph [ref=e98]: Scientific Publications
+      - generic [ref=e99]:
+        - img [ref=e100]
+        - generic [ref=e104]: 0 Bulan
+        - paragraph [ref=e105]: Magang Nasional Kemenaker
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]: About AgrianTech
+          - heading "Membangun solusi digital yang rapi dan fungsional" [level=2] [ref=e113]
+          - paragraph [ref=e114]: Lulusan Teknik Informatika dengan fokus pada pengembangan web, sistem informasi, pengolahan data, jaringan komputer, dan kecerdasan buatan. Telah menyelesaikan Program Magang Hub Kemenaker di Balai Bahasa Provinsi Sulawesi Tenggara sebagai ...
+        - generic [ref=e115]:
+          - generic [ref=e116]: Web Development
+          - generic [ref=e117]: Sistem Informasi
+          - generic [ref=e118]: AI-Assisted Dev
+        - link "Read more about me" [ref=e119] [cursor=pointer]:
+          - /url: /about
+          - text: Read more about me
+          - img [ref=e120]
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - paragraph [ref=e126]: Education
+          - paragraph [ref=e127]: Sarjana Teknik Informatika
+          - paragraph [ref=e128]: Universitas Halu Oleo, Kendari, Sulawesi Tenggara
+          - paragraph [ref=e129]: 2021 - 2025 · GPA 3.80 / 4.00
+        - generic [ref=e131]:
+          - paragraph [ref=e132]: Latest Role
+          - paragraph [ref=e133]: Pengolah Data dan Informasi
+          - paragraph [ref=e134]: Balai Bahasa Provinsi Sulawesi Tenggara
+          - paragraph [ref=e135]: Magang Hub Kemenaker · 6 Bulan
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: Location
+          - paragraph [ref=e139]: Kendari, Sulawesi Tenggara, Indonesia
+    - generic [ref=e141]:
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]: Featured Projects
+          - heading "Selected work" [level=2] [ref=e146]
+          - paragraph [ref=e147]: Beberapa proyek web dan sistem informasi yang dibangun dan dipublikasikan di domain instansi pemerintah.
+        - link "View all" [ref=e148] [cursor=pointer]:
+          - /url: /projects
+          - text: View all
+          - img [ref=e149]
+      - generic [ref=e151]:
+        - article [ref=e152]:
+          - generic [ref=e155]: SEPADAN
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: Sistem Informasi
+              - generic [ref=e159]: "2026"
+              - generic [ref=e160]: Published
+            - heading "SEPADAN — Sistem Pengelolaan Barang Persediaan" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Sistem pengelolaan barang persediaan untuk pencatatan transaksi masuk-keluar, pemantauan stok, permintaan, persetujuan, pelaporan, audit trail, dan manajemen pengguna.
+            - generic [ref=e163]:
+              - generic [ref=e164]: Laravel
+              - generic [ref=e165]: MySQL
+              - generic [ref=e166]: Tailwind CSS
+              - generic [ref=e167]: JavaScript
+            - generic [ref=e168]:
+              - link "Case Study" [ref=e169] [cursor=pointer]:
+                - /url: /projects/sepadan
+                - text: Case Study
+                - img [ref=e170]
+              - link "Live Demo" [ref=e173] [cursor=pointer]:
+                - /url: https://slide.kemendikdasmen.go.id/sepadan/
+                - text: Live Demo
+                - img [ref=e174]
+        - article [ref=e178]:
+          - generic [ref=e181]: Portal Kamus Digital BBST Sultra
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: Web Portal
+              - generic [ref=e185]: "2026"
+              - generic [ref=e186]: Published
+            - heading "Portal Kamus Digital BBST Sultra" [level=3] [ref=e187]
+            - paragraph [ref=e188]: Portal kamus digital berbasis web untuk akses bahasa daerah Sulawesi Tenggara. Mencakup 7 sub-kamus bahasa daerah.
+            - generic [ref=e189]:
+              - generic [ref=e190]: React
+              - generic [ref=e191]: Vite
+              - generic [ref=e192]: TypeScript
+              - generic [ref=e193]: Tailwind CSS
+            - generic [ref=e194]:
+              - link "Case Study" [ref=e195] [cursor=pointer]:
+                - /url: /projects/portal-kamus-digital-bbst
+                - text: Case Study
+                - img [ref=e196]
+              - link "Live Demo" [ref=e199] [cursor=pointer]:
+                - /url: https://slide.kemendikdasmen.go.id/kamus-bbst-sultra/
+                - text: Live Demo
+                - img [ref=e200]
+        - article [ref=e204]:
+          - generic [ref=e207]: Kamus Bergambar Sulawesi Tenggara
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e210]: Web Portal
+              - generic [ref=e211]: "2026"
+              - generic [ref=e212]: Published
+            - heading "Kamus Bergambar Sulawesi Tenggara" [level=3] [ref=e213]
+            - paragraph [ref=e214]: Portal kamus bergambar untuk pembelajaran bahasa daerah berbasis visual dengan akses publik untuk Kulisusu, Muna, Tolaki, dan Wakatobi.
+            - generic [ref=e215]:
+              - generic [ref=e216]: React
+              - generic [ref=e217]: Vite
+              - generic [ref=e218]: TypeScript
+              - generic [ref=e219]: Tailwind CSS
+            - generic [ref=e220]:
+              - link "Case Study" [ref=e221] [cursor=pointer]:
+                - /url: /projects/kamus-bergambar-sultra
+                - text: Case Study
+                - img [ref=e222]
+              - link "Live Demo" [ref=e225] [cursor=pointer]:
+                - /url: https://slide.kemendikdasmen.go.id/kamusbergambar-sultra/
+                - text: Live Demo
+                - img [ref=e226]
+        - article [ref=e230]:
+          - generic [ref=e233]: Sistem Inventaris Buku BBST
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - generic [ref=e236]: Sistem Informasi
+              - generic [ref=e237]: "2026"
+              - generic [ref=e238]: Published
+            - heading "Sistem Inventaris Buku BBST" [level=3] [ref=e239]
+            - paragraph [ref=e240]: Sistem inventaris buku berbasis web dengan akses login untuk pengelolaan data inventaris buku secara terstruktur.
+            - generic [ref=e241]:
+              - generic [ref=e242]: Laravel
+              - generic [ref=e243]: MySQL
+              - generic [ref=e244]: Tailwind CSS
+              - generic [ref=e245]: Blade
+            - generic [ref=e246]:
+              - link "Case Study" [ref=e247] [cursor=pointer]:
+                - /url: /projects/inventaris-buku-bbst
+                - text: Case Study
+                - img [ref=e248]
+              - link "Live Demo" [ref=e251] [cursor=pointer]:
+                - /url: https://slide.kemendikdasmen.go.id/inventaris-buku-bbst/
+                - text: Live Demo
+                - img [ref=e252]
+    - generic [ref=e258]:
+      - generic [ref=e259]:
+        - generic [ref=e260]:
+          - generic [ref=e261]: CASE STUDY
+          - generic [ref=e262]: Flagship
+        - heading "SEPADAN" [level=2] [ref=e263]
+        - paragraph [ref=e264]: Sistem pengelolaan barang persediaan untuk pencatatan transaksi masuk-keluar, pemantauan stok, permintaan, persetujuan, pelaporan, audit trail, dan manajemen pengguna.
+        - generic [ref=e265]:
+          - generic [ref=e266]:
+            - img [ref=e267]
+            - generic [ref=e269]: Pencatatan barang masuk dan keluar
+          - generic [ref=e270]:
+            - img [ref=e271]
+            - generic [ref=e273]: Monitoring stok real-time
+          - generic [ref=e274]:
+            - img [ref=e275]
+            - generic [ref=e277]: Approval workflow multi-level
+          - generic [ref=e278]:
+            - img [ref=e279]
+            - generic [ref=e281]: Audit trail (who, what, when)
+          - generic [ref=e282]:
+            - img [ref=e283]
+            - generic [ref=e285]: Laporan periodik
+        - generic [ref=e286]:
+          - link "View Case Study" [ref=e287] [cursor=pointer]:
+            - /url: /projects/sepadan
+          - link "Live Demo" [ref=e288] [cursor=pointer]:
+            - /url: https://slide.kemendikdasmen.go.id/sepadan/
+            - img [ref=e289]
+            - text: Live Demo
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - paragraph [ref=e297]: Problem
+            - paragraph [ref=e298]: Pencatatan manual, audit trail tidak ada
+          - generic [ref=e299]:
+            - paragraph [ref=e300]: Solution
+            - paragraph [ref=e301]: Sistem terintegrasi + workflow approval
+        - generic [ref=e302]:
+          - paragraph [ref=e303]: Result
+          - paragraph [ref=e304]: Sistem digunakan di Balai Bahasa Provinsi Sulawesi Tenggara. Mengurangi waktu pencatatan manual, audit trail yang dapat diaudit kapan saja, approval terstandar antar bagian.
+        - generic [ref=e305]:
+          - generic [ref=e306]: Laravel
+          - generic [ref=e307]: MySQL
+          - generic [ref=e308]: Tailwind CSS
+          - generic [ref=e309]: JavaScript
+          - generic [ref=e310]: Blade
+    - generic [ref=e312]:
+      - generic [ref=e313]:
+        - generic [ref=e314]: Experience
+        - heading "Perjalanan profesional" [level=2] [ref=e316]
+        - paragraph [ref=e317]: Pengalaman magang nasional, organisasi, dan kegiatan akademik.
+      - generic [ref=e318]:
+        - generic [ref=e322]:
+          - generic [ref=e323]: Nov 2025 - Mei 2026
+          - generic [ref=e324]:
+            - heading "Pengolah Data dan Informasi" [level=3] [ref=e325]
+            - paragraph [ref=e326]: Balai Bahasa Provinsi Sulawesi Tenggara
+            - paragraph [ref=e327]: Kendari, Sulawesi Tenggara
+          - paragraph [ref=e328]: Program Magang Hub Kemenaker Batch 2. Mendukung pengolahan data dan informasi instansi serta membangun beberapa sistem digital.
+          - list [ref=e329]:
+            - listitem [ref=e330]: Membangun SEPADAN — sistem pengelolaan barang persediaan
+            - listitem [ref=e332]: Membangun Sistem Inventaris Buku BBST
+            - listitem [ref=e334]: Mengembangkan Portal Kamus Digital BBST Sultra (7 bahasa daerah)
+            - listitem [ref=e336]: Mengembangkan Kamus Bergambar Sulawesi Tenggara (4 bahasa daerah)
+            - listitem [ref=e338]: Mendokumentasikan sistem secara terstruktur
+          - generic [ref=e340]:
+            - generic [ref=e341]: Laravel
+            - generic [ref=e342]: React
+            - generic [ref=e343]: TypeScript
+            - generic [ref=e344]: Tailwind CSS
+            - generic [ref=e345]: MySQL
+        - generic [ref=e349]:
+          - generic [ref=e350]: "2024"
+          - generic [ref=e351]:
+            - heading "Ketua Divisi Hubungan Masyarakat" [level=3] [ref=e352]
+            - paragraph [ref=e353]: Himpunan Mahasiswa Teknik Informatika
+            - paragraph [ref=e354]: Universitas Halu Oleo
+          - paragraph [ref=e355]: Merancang strategi promosi kegiatan, memperluas jaringan kerja sama, dan menjaga komunikasi dengan organisasi/komunitas eksternal.
+          - list [ref=e356]:
+            - listitem [ref=e357]: Strategi promosi kegiatan organisasi
+            - listitem [ref=e359]: Jaringan kerja sama dengan organisasi eksternal
+            - listitem [ref=e361]: Komunikasi multi-stakeholder
+        - generic [ref=e366]:
+          - generic [ref=e367]: Agu 2023 - Jan 2024
+          - generic [ref=e368]:
+            - heading "Koordinator Mahasiswa Inbound" [level=3] [ref=e369]
+            - paragraph [ref=e370]: Pertukaran Mahasiswa Merdeka (PMM) 3
+            - paragraph [ref=e371]: Universitas Wijaya Kusuma
+          - paragraph [ref=e372]: Program Merdeka Belajar Kampus Merdeka. Koordinator mahasiswa inbound lintas kampus.
+          - list [ref=e373]:
+            - listitem [ref=e374]: Koordinasi mahasiswa inbound
+            - listitem [ref=e376]: Pertukaran budaya dan akademik
+        - generic [ref=e381]:
+          - generic [ref=e382]: Feb - Mar 2024
+          - generic [ref=e383]:
+            - heading "Kuliah Kerja Praktek" [level=3] [ref=e384]
+            - paragraph [ref=e385]: Stasiun Telepon Otomatis 1 Kendari
+            - paragraph [ref=e386]: Kendari
+          - paragraph [ref=e387]: Mempelajari transmisi jaringan kabel udara/darat/laut, pengelolaan server, pemeliharaan perangkat, instalasi jaringan, dan operasional layanan telekomunikasi.
+          - list [ref=e388]:
+            - listitem [ref=e389]: Pemahaman transmisi jaringan
+            - listitem [ref=e391]: Operasional layanan telekomunikasi
+            - listitem [ref=e393]: Pemeliharaan server dan perangkat jaringan
+          - generic [ref=e395]:
+            - generic [ref=e396]: Network
+            - generic [ref=e397]: Server
+            - generic [ref=e398]: TCP/IP
+        - generic [ref=e402]:
+          - generic [ref=e403]: Agustus 2022
+          - generic [ref=e404]:
+            - heading "Pembicara" [level=3] [ref=e405]
+            - paragraph [ref=e406]: Gerakan Nasional 1000 Startup Digital Hub 15
+          - paragraph [ref=e407]: Materi tentang startup digital dan solusi tantangan bisnis digital.
+          - list [ref=e408]:
+            - listitem [ref=e409]: Materi startup digital
+            - listitem [ref=e411]: Solusi tantangan bisnis digital
+    - generic [ref=e414]:
+      - generic [ref=e415]:
+        - generic [ref=e416]: Skills
+        - heading "Tech stack & kemampuan" [level=2] [ref=e418]
+        - paragraph [ref=e419]: Teknologi dan metodologi yang digunakan dalam membangun solusi digital.
+      - generic [ref=e420]:
+        - generic [ref=e421]:
+          - generic [ref=e422]:
+            - img [ref=e424]
+            - heading "Frontend Development" [level=3] [ref=e426]
+          - generic [ref=e427]:
+            - generic [ref=e428]: React
+            - generic [ref=e429]: Next.js
+            - generic [ref=e430]: TypeScript
+            - generic [ref=e431]: Tailwind CSS
+            - generic [ref=e432]: HTML5 / CSS3
+            - generic [ref=e433]: Responsive Design
+            - generic [ref=e434]: Component Architecture
+        - generic [ref=e435]:
+          - generic [ref=e436]:
+            - img [ref=e438]
+            - heading "Backend & Database" [level=3] [ref=e441]
+          - generic [ref=e442]:
+            - generic [ref=e443]: Node.js
+            - generic [ref=e444]: Laravel / PHP
+            - generic [ref=e445]: PostgreSQL
+            - generic [ref=e446]: MySQL
+            - generic [ref=e447]: REST API Design
+            - generic [ref=e448]: SQL Query Design
+        - generic [ref=e449]:
+          - generic [ref=e450]:
+            - img [ref=e452]
+            - heading "UI/UX Design" [level=3] [ref=e457]
+          - generic [ref=e458]:
+            - generic [ref=e459]: Figma
+            - generic [ref=e460]: Canva
+            - generic [ref=e461]: Wireframing
+            - generic [ref=e462]: Prototyping
+            - generic [ref=e463]: Usability Testing
+            - generic [ref=e464]: Design System
+        - generic [ref=e465]:
+          - generic [ref=e466]:
+            - img [ref=e468]
+            - heading "Programming Languages" [level=3] [ref=e471]
+          - generic [ref=e472]:
+            - generic [ref=e473]: JavaScript
+            - generic [ref=e474]: TypeScript
+            - generic [ref=e475]: Python
+            - generic [ref=e476]: SQL
+            - generic [ref=e477]: Bash
+            - generic [ref=e478]: PHP
+        - generic [ref=e479]:
+          - generic [ref=e480]:
+            - img [ref=e482]
+            - heading "Development Process" [level=3] [ref=e486]
+          - generic [ref=e487]:
+            - generic [ref=e488]: Agile Methodology
+            - generic [ref=e489]: Git / GitHub
+            - generic [ref=e490]: Testing
+            - generic [ref=e491]: Technical Documentation
+            - generic [ref=e492]: Performance Optimization
+            - generic [ref=e493]: Accessibility
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - img [ref=e497]
+            - heading "AI-Assisted Development" [level=3] [ref=e499]
+          - generic [ref=e500]:
+            - generic [ref=e501]: Vibe Coding (AI pair programming)
+            - generic [ref=e502]: AI Agent Orchestration
+            - generic [ref=e503]: Prompt Engineering
+            - generic [ref=e504]: AI-Assisted Code Review
+            - generic [ref=e505]: AI-Assisted Documentation
+    - generic [ref=e507]:
+      - generic [ref=e508]:
+        - generic [ref=e509]:
+          - generic [ref=e510]: Publications
+          - heading "Publikasi ilmiah" [level=2] [ref=e512]
+          - paragraph [ref=e513]: Kontribusi penelitian di bidang sistem informasi, data, dan jaringan.
+        - link "View all" [ref=e514] [cursor=pointer]:
+          - /url: /publications
+          - text: View all
+          - img [ref=e515]
+      - generic [ref=e517]:
+        - generic [ref=e518]:
+          - generic [ref=e519]:
+            - generic [ref=e520]: Accepted
+            - generic [ref=e521]: Sinta 3
+            - generic [ref=e522]: "2026"
+          - heading "Sistem Deteksi Forensik Keaslian Gambar dan Video dengan K-Means dan Localization Tampering" [level=3] [ref=e523]
+          - paragraph [ref=e524]: Wahab, A. dkk. · Jurnal semanTIK (Volume 12 Nomor 1 Tahun 2026)
+        - generic [ref=e525]:
+          - generic [ref=e526]:
+            - generic [ref=e527]: Published
+            - generic [ref=e528]: "2025"
+          - heading "Clustering Kebiasaan Membaca Mahasiswa di Kota Kendari" [level=3] [ref=e529]
+          - paragraph [ref=e530]: Wahab, A. · JIKO (Jurnal Informatika dan Komputer)
+          - link "View DOI" [ref=e531] [cursor=pointer]:
+            - /url: https://doi.org/10.26798/jiko.v9i1.952
+            - text: View DOI
+            - img [ref=e532]
+        - generic [ref=e536]:
+          - generic [ref=e537]:
+            - generic [ref=e538]: Published
+            - generic [ref=e539]: "2025"
+          - heading "Analisis Kesadaran Teknologi Informasi Siswi SMA/SMK di Kota Kendari" [level=3] [ref=e540]
+          - paragraph [ref=e541]: Wahab, A. · JATI (Jurnal Mahasiswa Teknik Informatika)
+          - link "View DOI" [ref=e542] [cursor=pointer]:
+            - /url: https://doi.org/10.36040/jati.v9i2.13168
+            - text: View DOI
+            - img [ref=e543]
+    - generic [ref=e548]:
+      - generic [ref=e549]:
+        - generic [ref=e550]: Certificates
+        - heading "Sertifikat pendukung" [level=2] [ref=e552]
+        - paragraph [ref=e553]: Sertifikasi yang relevan untuk peran teknis dan profesional.
+      - generic [ref=e554]:
+        - generic [ref=e555]:
+          - img [ref=e557]
+          - generic [ref=e560]: Internship
+          - heading "Sertifikat Program Magang Nasional Periode 2" [level=3] [ref=e561]
+          - paragraph [ref=e562]: Kementerian Pendidikan Dasar dan Menengah / Balai Bahasa Provinsi Sulawesi Tenggara
+          - paragraph [ref=e563]: 24 Mei 2026
+        - generic [ref=e564]:
+          - img [ref=e566]
+          - generic [ref=e569]: Cybersecurity
+          - heading "Red Team Pentester and Blue Team SOC Analyst L1 E-Course" [level=3] [ref=e570]
+          - paragraph [ref=e571]: STUDI DEVSECOPS
+          - paragraph [ref=e572]: 28 September 2024
+        - generic [ref=e573]:
+          - img [ref=e575]
+          - generic [ref=e578]: Cybersecurity
+          - heading "Security Monitoring dengan Wazuh Batch 2" [level=3] [ref=e579]
+          - paragraph [ref=e580]: Taalenta
+          - paragraph [ref=e581]: 10 Februari 2024
+    - generic [ref=e583]:
+      - generic [ref=e584]:
+        - generic [ref=e585]: Services
+        - heading "What I can build" [level=2] [ref=e587]
+        - paragraph [ref=e588]: Membantu membangun website dan sistem digital untuk kebutuhan bisnis dan instansi.
+      - generic [ref=e589]:
+        - generic [ref=e590]:
+          - img [ref=e592]
+          - heading "Landing Page Development" [level=3] [ref=e597]
+          - paragraph [ref=e598]: Halaman promosi cepat dengan konversi tinggi.
+        - generic [ref=e599]:
+          - img [ref=e601]
+          - heading "Company Profile Website" [level=3] [ref=e605]
+          - paragraph [ref=e606]: Website profil perusahaan atau instansi.
+        - generic [ref=e607]:
+          - img [ref=e609]
+          - heading "Portfolio Website" [level=3] [ref=e612]
+          - paragraph [ref=e613]: Website personal atau profesional yang premium.
+        - generic [ref=e614]:
+          - img [ref=e616]
+          - heading "Sistem Informasi Web" [level=3] [ref=e620]
+          - paragraph [ref=e621]: CRUD, inventory, dan approval workflow.
+        - generic [ref=e622]:
+          - img [ref=e624]
+          - heading "UI/UX Design" [level=3] [ref=e629]
+          - paragraph [ref=e630]: Wireframe, prototype, dan design system.
+        - generic [ref=e631]:
+          - img [ref=e633]
+          - heading "Technical Documentation" [level=3] [ref=e636]
+          - paragraph [ref=e637]: Dokumentasi teknis yang terstruktur.
+        - generic [ref=e638]:
+          - img [ref=e640]
+          - heading "Website Optimization" [level=3] [ref=e643]
+          - paragraph [ref=e644]: Performa, SEO, dan accessibility.
+    - generic [ref=e647]:
+      - heading "Let's build something great" [level=2] [ref=e648]
+      - paragraph [ref=e649]: Tertarik bekerja sama, berdiskusi tentang peluang kerja, atau membangun sistem digital? Mari terhubung.
+      - generic [ref=e650]:
+        - link "Email" [ref=e651] [cursor=pointer]:
+          - /url: mailto:agrianwahab10@gmail.com
+          - img [ref=e652]
+          - text: Email
+        - link "LinkedIn" [ref=e655] [cursor=pointer]:
+          - /url: https://linkedin.com/in/agrian-wahab-7695b32a4/
+          - img [ref=e656]
+          - text: LinkedIn
+        - link "WhatsApp" [ref=e660] [cursor=pointer]:
+          - /url: https://wa.me/6282291134197
+          - img [ref=e661]
+          - text: WhatsApp
+    - generic [ref=e664]:
+      - generic [ref=e665]:
+        - generic [ref=e666]:
+          - heading "AgrianTech" [level=3] [ref=e667]
+          - paragraph [ref=e668]: Modern Web & Information Systems.
+        - generic [ref=e669]:
+          - heading "Navigate" [level=4] [ref=e670]
+          - list [ref=e671]:
+            - listitem [ref=e672]:
+              - link "Projects" [ref=e673] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e674]:
+              - link "About" [ref=e675] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e676]:
+              - link "Publications" [ref=e677] [cursor=pointer]:
+                - /url: /publications
+            - listitem [ref=e678]:
+              - link "Contact" [ref=e679] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e680]:
+          - heading "Connect" [level=4] [ref=e681]
+          - list [ref=e682]:
+            - listitem [ref=e683]:
+              - link "Email" [ref=e684] [cursor=pointer]:
+                - /url: mailto:agrianwahab10@gmail.com
+                - img [ref=e685]
+                - text: Email
+            - listitem [ref=e688]:
+              - link "LinkedIn" [ref=e689] [cursor=pointer]:
+                - /url: https://linkedin.com/in/agrian-wahab-7695b32a4/
+                - img [ref=e690]
+                - text: LinkedIn
+            - listitem [ref=e694]:
+              - link "WhatsApp" [ref=e695] [cursor=pointer]:
+                - /url: https://wa.me/6282291134197
+                - img [ref=e696]
+                - text: WhatsApp
+            - listitem [ref=e698]:
+              - link "GitHub" [ref=e699] [cursor=pointer]:
+                - /url: https://github.com/agrianwahab29
+                - img [ref=e700]
+                - text: GitHub
+      - generic [ref=e703]:
+        - paragraph [ref=e704]: © 2026 AgrianTech — Agrian Wahab.
+        - paragraph [ref=e705]: Built with Next.js, GSAP, and Tailwind CSS.
