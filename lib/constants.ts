@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "AgrianTech",
-  title: "AgrianTech - Agrian Wahab Portfolio",
+  name: "AgriTech",
+  title: "AgriTech - Agrian Wahab Portfolio",
   description:
     "Portfolio resmi Agrian Wahab, Web Developer dan System Information Developer yang berfokus pada pengembangan web modern, sistem informasi, UI/UX, dokumentasi teknis, dan AI-assisted development.",
-  url: "https://agriantech.vercel.app",
-  ogImage: "/images/og/agriantech-og.png",
+  url: "https://AgriTech.vercel.app",
+  ogImage: "/images/og/AgriTech-og.png",
   locale: "id_ID",
   keywords: [
     "Agrian Wahab",
-    "AgrianTech",
+    "AgriTech",
     "Web Developer",
     "Next.js Developer",
     "React Developer",

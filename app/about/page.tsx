@@ -32,7 +32,7 @@ export default function AboutPage() {
         <Container>
           <FadeUp className="mb-12 max-w-3xl space-y-5">
             <SectionHeading
-              eyebrow="About AgrianTech"
+              eyebrow="About AgriTech"
               title={profile.name}
               description={profile.headline}
             />
@@ -40,7 +40,7 @@ export default function AboutPage() {
               {profile.bio}
             </p>
             <p className="text-base leading-relaxed text-fg-secondary text-pretty md:text-lg">
-              Melalui AgrianTech, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
+              Melalui AgriTech, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
             </p>
           </FadeUp>
 

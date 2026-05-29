@@ -21,7 +21,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     setTheme(next);
     document.documentElement.setAttribute("data-theme", next);
     try {
-      localStorage.setItem("agriantech-theme", next);
+      localStorage.setItem("AgriTech-theme", next);
     } catch {
       // ignore storage errors (private mode, etc.)
     }

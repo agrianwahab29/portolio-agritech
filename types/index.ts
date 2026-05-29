@@ -1,4 +1,4 @@
-// types/index.ts — Tipe data konten AgrianTech Portfolio
+// types/index.ts — Tipe data konten AgriTech Portfolio
 
 export type ProjectStatus =
   | "Published"

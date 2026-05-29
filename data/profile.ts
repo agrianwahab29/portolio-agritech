@@ -2,7 +2,7 @@ import type { Profile } from "@/types";
 
 export const profile: Profile = {
   name: "Agrian Wahab",
-  brand: "AgrianTech",
+  brand: "AgriTech",
   headline: "Web Developer & System Information Developer",
   headlineEn:
     "Building modern web experiences, information systems, and AI-assisted digital solutions.",

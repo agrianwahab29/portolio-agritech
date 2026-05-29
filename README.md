@@ -1,4 +1,4 @@
-# AgrianTech Portfolio
+# AgriTech Portfolio
 
 Website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan **Next.js 15 + TypeScript + Tailwind CSS + GSAP**, di-deploy ke **Vercel**.
 
@@ -15,7 +15,7 @@ Website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan 
 
 ## Struktur
 
-Lihat [`AGENTS.md`](./AGENTS.md) untuk panduan AI agent. Lihat [`DESIGN.md`](./DESIGN.md) untuk color palette + design tokens. Lihat [`PRD_AgrianTech_GSAP_Portfolio.md`](./PRD_AgrianTech_GSAP_Portfolio.md) untuk spesifikasi produk.
+Lihat [`AGENTS.md`](./AGENTS.md) untuk panduan AI agent. Lihat [`DESIGN.md`](./DESIGN.md) untuk color palette + design tokens. Lihat [`PRD_AgriTech_GSAP_Portfolio.md`](./PRD_AgriTech_GSAP_Portfolio.md) untuk spesifikasi produk.
 
 ## Setup
 
@@ -51,4 +51,4 @@ Push ke `main` di GitHub akan trigger auto-deploy Vercel. Repo: [agrianwahab29/p
 
 ---
 
-**AgrianTech** — *Modern Web & Information Systems.*
+**AgriTech** — *Modern Web & Information Systems.*

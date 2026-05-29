@@ -1,4 +1,4 @@
-# AGENTS.md — AgrianTech Portfolio
+# AGENTS.md — AgriTech Portfolio
 
 Panduan untuk AI coding agent (Claude Code, Cursor, Copilot, dll) yang bekerja di repositori ini. Baca dokumen ini sebelum mengubah kode.
 
@@ -6,12 +6,12 @@ Panduan untuk AI coding agent (Claude Code, Cursor, Copilot, dll) yang bekerja d
 
 ## 1. Tentang Proyek
 
-**AgrianTech Portfolio** adalah website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan **Next.js + TypeScript + Tailwind CSS + GSAP**, di-deploy ke **Vercel**.
+**AgriTech Portfolio** adalah website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan **Next.js + TypeScript + Tailwind CSS + GSAP**, di-deploy ke **Vercel**.
 
 - **Static-first.** Tidak ada database, tidak ada backend, tidak ada auth/login.
 - **Data lokal.** Semua konten disimpan di file TypeScript dalam folder `data/`.
 - **Animasi.** GSAP + ScrollTrigger untuk motion cinematic, dengan dukungan `prefers-reduced-motion`.
-- **Sumber kebenaran produk:** `PRD_AgrianTech_GSAP_Portfolio.md`
+- **Sumber kebenaran produk:** `PRD_AgriTech_GSAP_Portfolio.md`
 - **Sumber kebenaran visual:** `DESIGN.md`
 
 > Selalu konsultasikan PRD dan DESIGN.md sebelum membuat keputusan produk atau visual.
@@ -78,7 +78,7 @@ portofolio/
 │   ├── images/
 │   ├── cv/
 │   └── favicon.ico
-├── PRD_AgrianTech_GSAP_Portfolio.md
+├── PRD_AgriTech_GSAP_Portfolio.md
 ├── DESIGN.md
 ├── AGENTS.md
 └── README.md
@@ -225,7 +225,7 @@ Website static tanpa database, risiko minimal. Tetap wajib:
 
 | Butuh apa | Lihat di mana |
 |-----------|---------------|
-| Spesifikasi produk lengkap | `PRD_AgrianTech_GSAP_Portfolio.md` |
+| Spesifikasi produk lengkap | `PRD_AgriTech_GSAP_Portfolio.md` |
 | Color palette & design tokens | `DESIGN.md` |
 | Tipe data konten | `types/index.ts` |
 | Data proyek | `data/projects.ts` |
@@ -234,4 +234,4 @@ Website static tanpa database, risiko minimal. Tetap wajib:
 
 ---
 
-**AgrianTech** — *Modern Web & Information Systems.*
+**AgriTech** — *Modern Web & Information Systems.*
