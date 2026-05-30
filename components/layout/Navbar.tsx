@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { profile } from "@/data/profile";
@@ -79,14 +79,6 @@ export function Navbar() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <ThemeToggle />
-          <a
-            href={profile.cvUrl}
-            download
-            className="inline-flex items-center gap-2 rounded-button bg-gradient-hero px-4 py-2 text-sm font-semibold text-brand-contrast transition-all hover:shadow-glow active:scale-[0.97]"
-          >
-            <Download size={15} />
-            Download CV
-          </a>
         </div>
 
         {/* Mobile controls */}
@@ -129,16 +121,6 @@ export function Navbar() {
                   </li>
                 );
               })}
-              <li className="pt-3">
-                <a
-                  href={profile.cvUrl}
-                  download
-                  className="flex w-full items-center justify-center gap-2 rounded-button bg-gradient-hero px-5 py-3 text-sm font-semibold text-brand-contrast"
-                >
-                  <Download size={15} />
-                  Download CV
-                </a>
-              </li>
             </ul>
           </div>
         </div>
