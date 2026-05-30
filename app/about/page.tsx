@@ -5,12 +5,10 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { FadeUp } from "@/components/animations/FadeUp";
 import { StaggerReveal } from "@/components/animations/StaggerReveal";
 import { profile } from "@/data/profile";
 import { skillGroups } from "@/data/skills";
-import { Download } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About",
@@ -86,12 +84,6 @@ export default function AboutPage() {
               ))}
             </StaggerReveal>
           </div>
-
-          <FadeUp>
-            <Button href={profile.cvUrl} size="lg" download>
-              <Download size={17} /> Download CV
-            </Button>
-          </FadeUp>
         </Container>
       </Section>
       <Footer />

@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MagneticButton } from "@/components/animations/MagneticButton";
 import { profile } from "@/data/profile";
-import { ArrowDown, Download, Mail, Github, Linkedin, ArrowRight } from "lucide-react";
+import { ArrowDown, Mail, Github, Linkedin, ArrowRight } from "lucide-react";
 
 const techPills = ["Next.js", "TypeScript", "GSAP", "Tailwind", "Laravel"];
 
@@ -83,9 +83,9 @@ export function Hero() {
                   <ArrowRight size={17} />
                 </Button>
               </MagneticButton>
-              <Button href={profile.cvUrl} variant="secondary" size="lg" download>
-                <Download size={17} />
-                Download CV
+              <Button href="/contact" variant="secondary" size="lg">
+                <Mail size={17} />
+                Contact Me
               </Button>
             </div>
 
