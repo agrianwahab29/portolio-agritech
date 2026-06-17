@@ -11,7 +11,7 @@ export const stats: Stat[] = [
   },
   {
     id: "projects",
-    value: 4,
+    value: 7,
     label: "Live Web Projects",
     icon: "Globe",
   },
@@ -20,12 +20,5 @@ export const stats: Stat[] = [
     value: 5,
     label: "Scientific Publications",
     icon: "BookOpen",
-  },
-  {
-    id: "internship",
-    value: 6,
-    suffix: " Bulan",
-    label: "Magang Nasional Kemenaker",
-    icon: "Briefcase",
   },
 ];

@@ -1,21 +1,34 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
-import { ArrowRight, Bot, FileText, Layers, Shield, BookOpen, Zap, Github, ExternalLink } from "lucide-react";
+import {
+  Bot,
+  FileText,
+  Layers,
+  Shield,
+  BookOpen,
+  Zap,
+  Github,
+  ArrowRight,
+  ExternalLink,
+} from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 import { agents, agentPipelineStats } from "@/data/agents";
 import { cn } from "@/lib/utils";
+
+/* ── Icon + color maps ─────────────────────────────────── */
 
 const layerIcons: Record<string, React.ElementType> = {
   L0: Bot,
   L1: Layers,
   L2: FileText,
+  L3: FileText,
+  L4: Shield,
   L5: Shield,
   L6: BookOpen,
   L7: Zap,
@@ -24,225 +37,184 @@ const layerIcons: Record<string, React.ElementType> = {
 const categoryColors: Record<string, string> = {
   Core: "border-brand/30 bg-brand/5 text-brand",
   Requirement: "border-ok/30 bg-ok/5 text-ok",
+  Technical: "border-info/30 bg-info/5 text-info",
   Quality: "border-warn/30 bg-warn/5 text-warn",
   Guide: "border-info/30 bg-info/5 text-info",
 };
 
+/* ── Component ─────────────────────────────────────────── */
+
 export function AgentShowcase() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const pipelineRef = useRef<HTMLDivElement>(null);
+  const scopeRef = useRef<HTMLElement>(null);
 
   useGSAP(
     () => {
-      if (!sectionRef.current || prefersReducedMotion()) return;
+      if (prefersReducedMotion()) return;
 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      // Heading animation
-      tl.from("[data-agent='heading']", { opacity: 0, y: 30, duration: 0.7 }, 0);
-
-      // Pipeline layers animate
-      tl.from("[data-agent='layer']", {
-        opacity: 0,
-        y: 20,
-        stagger: 0.08,
-        duration: 0.5,
-      }, 0.3);
-
-      // Agent cards
-      tl.from("[data-agent='card']", {
+      tl.from("[data-agent='heading']", {
         opacity: 0,
         y: 30,
-        stagger: 0.06,
-        duration: 0.5,
-      }, 0.6);
+        duration: 0.6,
+      });
 
-      // CTA
-      tl.from("[data-agent='cta']", { opacity: 0, y: 20, duration: 0.5 }, 1);
+      tl.from(
+        "[data-agent='pipeline-chip']",
+        { opacity: 0, y: 16, stagger: 0.06, duration: 0.4 },
+        0.25,
+      );
+
+      tl.from(
+        "[data-agent='card']",
+        { opacity: 0, y: 24, stagger: 0.05, duration: 0.45 },
+        0.5,
+      );
+
+      tl.from("[data-agent='cta']", { opacity: 0, y: 20, duration: 0.5 }, 0.9);
     },
-    { scope: sectionRef },
+    { scope: scopeRef },
   );
 
   return (
-    <Section ref={sectionRef} id="agents" size="lg" className="relative overflow-hidden">
-      {/* Background gradient */}
+    <Section
+      ref={scopeRef}
+      id="agents"
+      size="lg"
+      className="relative overflow-hidden"
+    >
+      {/* Subtle background accent */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-brand/5 to-transparent" />
 
       <Container className="relative z-10">
-        {/* Header */}
-        <div data-agent="heading" className="mb-16 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/5 px-4 py-1.5">
+        {/* ─── Block 1: Header + Pipeline Overview ─── */}
+        <div data-agent="heading" className="text-center">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/5 px-4 py-1.5">
             <Bot size={14} className="text-brand" />
-            <span className="text-xs font-medium text-brand">AI Agent Pipeline</span>
-          </div>
-
-          <h2 className="font-heading text-4xl font-bold tracking-tight text-fg-primary md:text-5xl lg:text-6xl">
-            Docgen Complete Suite
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-fg-secondary">
-            14-agent pipeline yang mengubah satu prompt menjadi paket dokumen lengkap —
-            BRD, MRD, PRD, SRS, database schema, arsitektur, UI/UX spec, coding rules,
-            test plan, review, build guide, dan execution prompt.
-          </p>
-        </div>
-
-        {/* Pipeline Flow */}
-        <div ref={pipelineRef} className="mb-16">
-          <div className="mb-6 flex items-center justify-between">
-            <h3 className="font-heading text-lg font-semibold text-fg-primary">
-              Pipeline Architecture
-            </h3>
-            <span className="rounded-full border border-brand/30 bg-brand/5 px-3 py-1 text-xs font-medium text-brand">
-              8 Layers • 14 Agents
+            <span className="text-xs font-medium text-brand">
+              AI Agent Pipeline
             </span>
           </div>
 
-          <div className="relative">
-            {/* Connection line */}
-            <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-brand/50 via-transparent to-transparent" />
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-fg-primary md:text-4xl lg:text-5xl">
+            <span className="gradient-text">Docgen Complete Suite</span>
+          </h2>
 
-            {/* Layers */}
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {agentPipelineStats.layers.map((layer, i) => {
-                const Icon = layerIcons[layer.layer] || Layers;
-                return (
-                  <div
-                    key={layer.layer}
-                    data-agent="layer"
-                    className={cn(
-                      "group relative glass rounded-card p-5",
-                      "border border-line hover:border-brand/30",
-                      "transition-all duration-300 hover:-translate-y-1 hover:shadow-glow",
-                    )}
-                  >
-                    {/* Layer number badge */}
-                    <div className="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-xs font-bold text-brand ring-2 ring-bg-primary">
-                      {i + 1}
-                    </div>
+          <p className="mx-auto mt-3 max-w-2xl text-base text-fg-secondary">
+            {agentPipelineStats.totalAgents}-agent pipeline yang mengubah satu
+            prompt menjadi paket dokumen lengkap — BRD, MRD, PRD, SRS, dan
+            seluruh artefak teknis.
+          </p>
 
-                    <div className="flex items-start gap-3">
-                      <div className="rounded-lg bg-brand/10 p-2">
-                        <Icon size={18} className="text-brand" />
-                      </div>
-                      <div>
-                        <span className="font-mono text-xs font-medium text-brand">{layer.layer}</span>
-                        <h4 className="mt-1 font-heading text-sm font-semibold text-fg-primary">
-                          {layer.name}
-                        </h4>
-                        <p className="mt-1 text-xs text-fg-muted">{layer.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          {/* Pipeline stats badges */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            <Badge variant="tech" size="sm">
+              {agentPipelineStats.totalAgents} Agents
+            </Badge>
+            <Badge variant="tech" size="sm">
+              {agentPipelineStats.totalLayers} Layers
+            </Badge>
+            {agentPipelineStats.keyFeatures.map((f) => (
+              <Badge key={f} variant="tech" size="sm">
+                {f}
+              </Badge>
+            ))}
           </div>
         </div>
 
-        {/* Key Features */}
-        <div className="mb-16 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-          {agentPipelineStats.keyFeatures.map((feature) => (
-            <div
-              key={feature}
-              className="flex items-center gap-3 rounded-xl border border-line bg-surface/50 p-4"
-            >
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand/10">
-                <Shield size={14} className="text-brand" />
+        {/* Pipeline layer chips — horizontal timeline */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+          {agentPipelineStats.layers.map((layer) => {
+            const Icon = layerIcons[layer.layer] || Layers;
+            return (
+              <div
+                key={layer.layer}
+                data-agent="pipeline-chip"
+                className={cn(
+                  "glass inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5",
+                  "transition-colors hover:border-brand/30 hover:bg-brand/5",
+                )}
+              >
+                <Icon size={13} className="text-brand" />
+                <span className="font-mono text-[11px] font-semibold text-brand">
+                  {layer.layer}
+                </span>
+                <span className="text-xs text-fg-muted">{layer.name}</span>
               </div>
-              <span className="text-sm font-medium text-fg-secondary">{feature}</span>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Agent Cards */}
-        <div className="mb-12">
-          <h3 className="mb-6 font-heading text-lg font-semibold text-fg-primary">
+        {/* ─── Block 2: Agent Grid (dense) ─── */}
+        <div className="mt-10">
+          <h3 className="mb-4 font-heading text-base font-semibold text-fg-primary">
             Core Agents
           </h3>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {agents.map((agent) => {
               const Icon = layerIcons[agent.layer] || Bot;
-              const colorClass = categoryColors[agent.category] || categoryColors.Core;
+              const colorClass =
+                categoryColors[agent.category] || categoryColors.Core;
 
               return (
                 <article
                   key={agent.id}
                   data-agent="card"
                   className={cn(
-                    "group flex flex-col rounded-card border p-5",
-                    "glass glass-hover transition-all duration-300",
-                    "hover:-translate-y-1",
+                    "group flex flex-col glass rounded-card border border-line p-4",
+                    "transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30",
                   )}
-                  style={{
-                    borderColor: "var(--surface-border)",
-                  }}
                 >
-                  {/* Header */}
-                  <div className="mb-4 flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="rounded-lg bg-brand/10 p-2.5">
-                        <Icon size={18} className="text-brand" />
+                  {/* Card header */}
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <div className="rounded-lg bg-brand/10 p-2">
+                        <Icon size={16} className="text-brand" />
                       </div>
                       <div>
-                        <span className="font-mono text-xs font-medium text-brand">
+                        <span className="font-mono text-[11px] font-medium text-brand">
                           {agent.layer}
                         </span>
-                        <h4 className="font-heading text-sm font-semibold text-fg-primary">
+                        <h4 className="font-heading text-sm font-semibold text-fg-primary leading-tight">
                           {agent.name}
                         </h4>
                       </div>
                     </div>
                     <span
                       className={cn(
-                        "rounded-full border px-2 py-0.5 text-[10px] font-medium",
-                        colorClass,
-                      )}
-                    >
-                      {agent.output !== "—" ? agent.output.replace(".md", "") : "Entry"}
-                    </span>
-                  </div>
-
-                  {/* Description */}
-                  <p className="mb-4 flex-1 text-sm text-fg-muted leading-relaxed">
-                    {agent.description}
-                  </p>
-
-                  {/* Role */}
-                  <div className="mb-4 text-xs text-fg-muted">
-                    <span className="font-medium text-fg-secondary">Role: </span>
-                    {agent.role}
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-4 space-y-1.5">
-                    {agent.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-2 text-xs text-fg-muted">
-                        <div className="h-1 w-1 shrink-0 rounded-full bg-brand" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Footer */}
-                  <div className="mt-auto flex items-center justify-between border-t border-line pt-4">
-                    <span
-                      className={cn(
-                        "rounded-full border px-2 py-0.5 text-[10px] font-medium",
+                        "shrink-0 rounded-full border px-2 py-0.5 text-[10px] font-medium",
                         colorClass,
                       )}
                     >
                       {agent.category}
                     </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="mt-2 flex-1 text-xs text-fg-muted leading-relaxed line-clamp-3">
+                    {agent.description}
+                  </p>
+
+                  {/* Output + link */}
+                  <div className="mt-3 flex items-center justify-between border-t border-line pt-3">
+                    <span className="text-[10px] font-medium text-fg-muted">
+                      Output:{" "}
+                      <span className="font-mono text-fg-secondary">
+                        {agent.output !== "—"
+                          ? agent.output.replace(".md", "")
+                          : "Entry"}
+                      </span>
+                    </span>
                     <a
                       href={agent.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-medium text-fg-muted transition-colors hover:text-brand"
+                      className="inline-flex items-center gap-1 text-[10px] font-medium text-fg-muted transition-colors hover:text-brand"
+                      aria-label={`View ${agent.name} on GitHub`}
                     >
-                      View on GitHub
-                      <ExternalLink size={10} />
+                      GitHub
+                      <ExternalLink size={9} />
                     </a>
                   </div>
                 </article>
@@ -251,42 +223,20 @@ export function AgentShowcase() {
           </div>
         </div>
 
-        {/* Supported Deliverables */}
-        <div className="mb-16 rounded-xl border border-line bg-surface/30 p-6">
-          <h3 className="mb-4 font-heading text-base font-semibold text-fg-primary">
-            Supported Deliverable Types
-          </h3>
-          <div className="grid gap-4 md:grid-cols-2">
-            {agentPipelineStats.supportedDeliverables.map((item) => (
-              <div
-                key={item.type}
-                className="flex items-center gap-4 rounded-lg border border-line/50 bg-bg-primary/50 p-4"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand/10">
-                  <FileText size={18} className="text-brand" />
-                </div>
-                <div>
-                  <span className="font-mono text-sm font-bold text-brand">{item.type}</span>
-                  <p className="mt-0.5 text-sm text-fg-muted">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div data-agent="cta" className="text-center">
-          <div className="inline-flex flex-col items-center gap-4 rounded-2xl border border-brand/20 bg-gradient-to-b from-brand/10 to-transparent p-8">
+        {/* ─── Block 3: CTA ─── */}
+        <div data-agent="cta" className="mt-10 text-center">
+          <div className="inline-flex flex-col items-center gap-3 glass rounded-card border border-brand/20 p-6">
             <div className="flex items-center gap-2">
-              <Github size={20} className="text-brand" />
-              <span className="font-heading text-xl font-bold text-fg-primary">
+              <Github size={18} className="text-brand" />
+              <span className="font-heading text-lg font-bold text-fg-primary">
                 View on GitHub
               </span>
             </div>
 
             <p className="max-w-md text-sm text-fg-muted">
-              Docgen Complete Suite — production-ready 14-agent pipeline untuk dokumentasi otomatis
-              yang anti-halusinasi, traceable, dan siap build.
+              Production-ready {agentPipelineStats.totalAgents}-agent pipeline
+              untuk dokumentasi otomatis yang anti-halusinasi, traceable, dan
+              siap build.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3">

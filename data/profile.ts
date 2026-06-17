@@ -15,7 +15,7 @@ export const profile: Profile = {
   linkedin: "https://linkedin.com/in/agrian-wahab-7695b32a4/",
   github: "https://github.com/agrianwahab29",
   location: "Kendari, Sulawesi Tenggara, Indonesia",
-  bio: "Lulusan Teknik Informatika dengan fokus pada pengembangan web, sistem informasi, pengolahan data, jaringan komputer, dan kecerdasan buatan. Telah menyelesaikan Program Magang Hub Kemenaker di Balai Bahasa Provinsi Sulawesi Tenggara sebagai Pengolah Data dan Informasi. Memiliki portofolio sistem berbasis web yang telah dapat diakses publik, termasuk Portal Kamus Digital BBST Sultra, Kamus Bergambar Sulawesi Tenggara, SEPADAN, dan Sistem Inventaris Buku BBST. Terbiasa mengerjakan analisis kebutuhan, UI/UX, implementasi fitur, testing, dokumentasi teknis, optimasi performa, dan pemanfaatan AI tools untuk mempercepat pengembangan sistem.",
+  bio: "Sarjana Teknik Informatika dengan IPK 3.80/4.00 dan konsentrasi Komputasi Berbasis Jaringan. Memiliki pengalaman dalam pengembangan aplikasi web, sistem informasi, pengolahan data, troubleshooting jaringan, cloud computing, virtualisasi, dan kecerdasan buatan. Telah menyelesaikan Program Pemagangan Nasional Kementerian Ketenagakerjaan di Balai Bahasa Provinsi Sulawesi Tenggara sebagai Pengolah Data dan Informasi dengan predikat Sangat Baik. Terampil memanfaatkan AI tools/agents, prompt engineering, Product Requirement Document (PRD), dan AI-assisted development untuk mempercepat analisis kebutuhan, dokumentasi teknis, perancangan fitur, serta implementasi solusi digital.",
   bioShort:
     "Saya membangun website modern, sistem informasi, dan pipeline agent AI yang rapi, fungsional, terdokumentasi, dan production-ready.",
   education: {
@@ -23,6 +23,7 @@ export const profile: Profile = {
     degree: "Sarjana Teknik Informatika",
     period: "2021 - 2025",
     gpa: "3.80 / 4.00",
+    concentration: "Komputasi Berbasis Jaringan",
   },
   cvUrl: "/cv/CV_Agrian_Wahab.pdf",
 };

@@ -52,6 +52,9 @@ export default function AboutPage() {
               <p className="text-sm text-fg-muted">
                 {profile.education.period} · GPA {profile.education.gpa}
               </p>
+              {profile.education.concentration && (
+                <p className="mt-1 text-sm text-fg-muted">Konsentrasi: {profile.education.concentration}</p>
+              )}
             </div>
           </FadeUp>
 

@@ -135,6 +135,7 @@ export type Profile = {
     degree: string;
     period: string;
     gpa: string;
+    concentration?: string;
   };
   cvUrl: string;
 };

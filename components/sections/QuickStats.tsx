@@ -7,7 +7,6 @@ import {
   GraduationCap,
   Globe,
   BookOpen,
-  Briefcase,
   type LucideIcon,
 } from "lucide-react";
 
@@ -15,14 +14,13 @@ const iconMap: Record<string, LucideIcon> = {
   GraduationCap,
   Globe,
   BookOpen,
-  Briefcase,
 };
 
 export function QuickStats() {
   return (
     <Section size="sm" className="border-y border-line bg-bg-secondary/40">
       <Container>
-        <StaggerReveal className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+        <StaggerReveal className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5">
           {stats.map((stat) => {
             const Icon = iconMap[stat.icon];
             return (

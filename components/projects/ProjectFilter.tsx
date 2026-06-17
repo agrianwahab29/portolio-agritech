@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import type { Project } from "@/types";
 import { cn } from "@/lib/utils";
 
-const filters = ["All", "Web Portal", "Sistem Informasi", "UI/UX"];
+const filters = ["All", "Web Portal", "Sistem Informasi", "UI/UX", "AI Agents"];
 
 type ProjectFilterProps = {
   projects: Project[];
