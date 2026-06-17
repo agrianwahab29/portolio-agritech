@@ -51,27 +51,41 @@ export function AgentShowcase() {
     () => {
       if (prefersReducedMotion()) return;
 
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      tl.from("[data-agent='heading']", {
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scopeRef.current,
+          start: "top 80%",
+          once: true,
+        },
+        defaults: { ease: "power3.out" },
       });
 
-      tl.from(
+      tl.fromTo(
+        "[data-agent='heading']",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6 }
+      );
+
+      tl.fromTo(
         "[data-agent='pipeline-chip']",
-        { opacity: 0, y: 16, stagger: 0.06, duration: 0.4 },
-        0.25,
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, stagger: 0.05, duration: 0.4 },
+        "-=0.4"
       );
 
-      tl.from(
+      tl.fromTo(
         "[data-agent='card']",
-        { opacity: 0, y: 24, stagger: 0.05, duration: 0.45 },
-        0.5,
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, stagger: 0.04, duration: 0.45 },
+        "-=0.2"
       );
 
-      tl.from("[data-agent='cta']", { opacity: 0, y: 20, duration: 0.5 }, 0.9);
+      tl.fromTo(
+        "[data-agent='cta']",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.5 },
+        "-=0.2"
+      );
     },
     { scope: scopeRef },
   );
@@ -80,7 +94,7 @@ export function AgentShowcase() {
     <Section
       ref={scopeRef}
       id="agents"
-      size="md"
+      size="sm"
       className="relative overflow-hidden"
     >
       {/* Subtle background accent */}
@@ -123,7 +137,7 @@ export function AgentShowcase() {
         </div>
 
         {/* Pipeline layer chips — horizontal timeline */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           {agentPipelineStats.layers.map((layer) => {
             const Icon = layerIcons[layer.layer] || Layers;
             return (
@@ -146,8 +160,8 @@ export function AgentShowcase() {
         </div>
 
         {/* ─── Block 2: Agent Grid (dense) ─── */}
-        <div className="mt-8">
-          <h3 className="mb-4 font-heading text-base font-semibold text-fg-primary">
+        <div className="mt-6">
+          <h3 className="mb-3 font-heading text-base font-semibold text-fg-primary">
             Core Agents
           </h3>
 
@@ -224,7 +238,7 @@ export function AgentShowcase() {
         </div>
 
         {/* ─── Block 3: CTA ─── */}
-        <div data-agent="cta" className="mt-8 text-center">
+        <div data-agent="cta" className="mt-6 text-center">
           <div className="inline-flex flex-col items-center gap-3 glass rounded-card border border-brand/20 p-5">
             <div className="flex items-center gap-2">
               <Github size={18} className="text-brand" />

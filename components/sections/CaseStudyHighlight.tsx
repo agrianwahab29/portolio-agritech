@@ -11,7 +11,7 @@ export function CaseStudyHighlight() {
   if (!sepadan) return null;
 
   return (
-    <Section size="md" className="bg-bg-secondary/50">
+    <Section size="sm" className="bg-bg-secondary/50">
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
           <FadeUp className="space-y-5">
