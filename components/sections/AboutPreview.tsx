@@ -18,8 +18,10 @@ export function AboutPreview() {
             <SectionHeading
               eyebrow="About AgriNode"
               title="Membangun solusi digital yang rapi dan fungsional"
-              description={profile.bio.substring(0, 240) + "..."}
             />
+            <p className="mt-4 text-base leading-relaxed text-fg-secondary text-justify text-pretty md:text-lg">
+              {profile.bio.substring(0, 240) + "..."}
+            </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {highlights.map((h) => (
                 <Badge key={h} variant="category">{h}</Badge>
