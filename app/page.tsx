@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { QuickStats } from "@/components/sections/QuickStats";
 import { AboutPreview } from "@/components/sections/AboutPreview";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { AgentShowcase } from "@/components/sections/AgentShowcase";
 import { CaseStudyHighlight } from "@/components/sections/CaseStudyHighlight";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { SkillsMatrix } from "@/components/sections/SkillsMatrix";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <QuickStats />
       <AboutPreview />
       <FeaturedProjects />
+      <AgentShowcase />
       <CaseStudyHighlight />
       <ExperienceTimeline />
       <SkillsMatrix />

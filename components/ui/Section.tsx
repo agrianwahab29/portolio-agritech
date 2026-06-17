@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
 type SectionProps = {
@@ -15,25 +16,31 @@ const sizeMap = {
   lg: "py-20 md:py-28 lg:py-32",
 } as const;
 
-export function Section({
-  children,
-  className,
-  id,
-  size = "md",
-  bleed = false,
-  ...rest
-}: SectionProps) {
-  return (
-    <section
-      id={id}
-      className={cn(
-        sizeMap[size],
-        bleed ? "" : "relative",
-        className,
-      )}
-      {...rest}
-    >
-      {children}
-    </section>
-  );
-}
+export const Section = forwardRef<HTMLElement, SectionProps>(
+  function Section(
+    {
+      children,
+      className,
+      id,
+      size = "md",
+      bleed = false,
+      ...rest
+    },
+    ref,
+  ) {
+    return (
+      <section
+        ref={ref}
+        id={id}
+        className={cn(
+          sizeMap[size],
+          bleed ? "" : "relative",
+          className,
+        )}
+        {...rest}
+      >
+        {children}
+      </section>
+    );
+  },
+);

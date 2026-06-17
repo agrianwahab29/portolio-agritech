@@ -4,7 +4,7 @@ export function ThemeScript() {
   const script = `
 (function() {
   try {
-    var stored = localStorage.getItem('AgriTech-theme');
+    var stored = localStorage.getItem('AgriNode-theme');
     var theme = stored;
     if (!theme) {
       theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';

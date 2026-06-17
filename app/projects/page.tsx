@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Daftar proyek web dan sistem informasi yang dibangun oleh Agrian Wahab (AgriTech).",
+    "Daftar proyek web dan sistem informasi yang dibangun oleh Agrian Wahab (AgriNode).",
 };
 
 export default function ProjectsPage() {
@@ -23,7 +23,7 @@ export default function ProjectsPage() {
         <Container>
           <SectionHeading
             eyebrow="Projects"
-            title="Semua proyek AgriTech"
+            title="Semua proyek AgriNode"
             description="Kumpulan proyek web portal dan sistem informasi yang telah dibangun dan dipublikasikan."
             className="mb-10 md:mb-12"
           />

@@ -2,13 +2,13 @@ import type { Profile } from "@/types";
 
 export const profile: Profile = {
   name: "Agrian Wahab",
-  brand: "AgriTech",
-  headline: "Web Developer & System Information Developer",
+  brand: "AgriNode",
+  headline: "Web Developer & AI Agent Developer",
   headlineEn:
-    "Building modern web experiences, information systems, and AI-assisted digital solutions.",
+    "Building modern web experiences, information systems, and production-ready AI agent pipelines.",
   headlineId:
-    "Membangun website modern, sistem informasi, dan solusi digital berbasis AI-assisted workflow.",
-  tagline: "Modern Web & Information Systems.",
+    "Membangun website modern, sistem informasi, dan pipeline agent AI production-ready.",
+  tagline: "Modern Web & Intelligent Systems.",
   email: "agrianwahab10@gmail.com",
   phone: "+6282291134197",
   whatsapp: "https://wa.me/6282291134197",
@@ -17,7 +17,7 @@ export const profile: Profile = {
   location: "Kendari, Sulawesi Tenggara, Indonesia",
   bio: "Lulusan Teknik Informatika dengan fokus pada pengembangan web, sistem informasi, pengolahan data, jaringan komputer, dan kecerdasan buatan. Telah menyelesaikan Program Magang Hub Kemenaker di Balai Bahasa Provinsi Sulawesi Tenggara sebagai Pengolah Data dan Informasi. Memiliki portofolio sistem berbasis web yang telah dapat diakses publik, termasuk Portal Kamus Digital BBST Sultra, Kamus Bergambar Sulawesi Tenggara, SEPADAN, dan Sistem Inventaris Buku BBST. Terbiasa mengerjakan analisis kebutuhan, UI/UX, implementasi fitur, testing, dokumentasi teknis, optimasi performa, dan pemanfaatan AI tools untuk mempercepat pengembangan sistem.",
   bioShort:
-    "Saya membangun website modern, sistem informasi, dan solusi digital yang rapi, fungsional, terdokumentasi, dan mudah digunakan.",
+    "Saya membangun website modern, sistem informasi, dan pipeline agent AI yang rapi, fungsional, terdokumentasi, dan production-ready.",
   education: {
     university: "Universitas Halu Oleo, Kendari, Sulawesi Tenggara",
     degree: "Sarjana Teknik Informatika",

@@ -26,6 +26,12 @@ export const services: Service[] = [
     icon: "Database",
   },
   {
+    id: "ai-agent",
+    title: "AI Agent Development",
+    description: "Pipeline agent AI untuk dokumentasi & workflow automation.",
+    icon: "Bot",
+  },
+  {
     id: "ui-ux",
     title: "UI/UX Design",
     description: "Wireframe, prototype, dan design system.",

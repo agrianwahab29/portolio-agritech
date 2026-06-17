@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -47,9 +48,18 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="font-heading text-lg font-bold tracking-tight text-fg-primary transition-colors hover:text-brand"
+          className="flex items-center gap-2 transition-opacity hover:opacity-80"
         >
-          {profile.brand}
+          <Image
+            src="/images/brand/logo.png"
+            alt={`${profile.brand} Logo`}
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+          />
+          <span className="font-heading text-lg font-bold tracking-tight text-fg-primary">
+            {profile.brand}
+          </span>
         </Link>
 
         {/* Desktop nav */}

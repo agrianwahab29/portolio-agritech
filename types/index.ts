@@ -1,4 +1,4 @@
-// types/index.ts — Tipe data konten AgriTech Portfolio
+// types/index.ts — Tipe data konten AgriNode Portfolio
 
 export type ProjectStatus =
   | "Published"
@@ -137,4 +137,18 @@ export type Profile = {
     gpa: string;
   };
   cvUrl: string;
+};
+
+export type AgentCategory = "Core" | "Requirement" | "Technical" | "Quality" | "Guide";
+
+export type Agent = {
+  id: string;
+  name: string;
+  description: string;
+  layer: string;
+  role: string;
+  output: string;
+  category: AgentCategory;
+  features: string[];
+  githubUrl: string;
 };

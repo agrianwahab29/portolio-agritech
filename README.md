@@ -1,4 +1,4 @@
-# AgriTech Portfolio
+# AgriNode Portfolio
 
 Website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan **Next.js 15 + TypeScript + Tailwind CSS + GSAP**, di-deploy ke **Vercel**.
 
@@ -51,4 +51,4 @@ Push ke `main` di GitHub akan trigger auto-deploy Vercel. Repo: [agrianwahab29/p
 
 ---
 
-**AgriTech** — *Modern Web & Information Systems.*
+**AgriNode** — *Modern Web & Intelligent Systems.*

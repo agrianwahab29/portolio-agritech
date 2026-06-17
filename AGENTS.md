@@ -1,4 +1,4 @@
-# AGENTS.md — AgriTech Portfolio
+# AGENTS.md — AgriNode Portfolio
 
 Panduan untuk AI coding agent (Claude Code, Cursor, Copilot, dll) yang bekerja di repositori ini. Baca dokumen ini sebelum mengubah kode.
 
@@ -6,7 +6,7 @@ Panduan untuk AI coding agent (Claude Code, Cursor, Copilot, dll) yang bekerja d
 
 ## 1. Tentang Proyek
 
-**AgriTech Portfolio** adalah website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan **Next.js + TypeScript + Tailwind CSS + GSAP**, di-deploy ke **Vercel**.
+**AgriNode Portfolio** adalah website portofolio personal-profesional milik **Agrian Wahab**, dibangun dengan **Next.js + TypeScript + Tailwind CSS + GSAP**, di-deploy ke **Vercel**.
 
 - **Static-first.** Tidak ada database, tidak ada backend, tidak ada auth/login.
 - **Data lokal.** Semua konten disimpan di file TypeScript dalam folder `data/`.
@@ -234,4 +234,4 @@ Website static tanpa database, risiko minimal. Tetap wajib:
 
 ---
 
-**AgriTech** — *Modern Web & Information Systems.*
+**AgriNode** — *Modern Web & Intelligent Systems.*

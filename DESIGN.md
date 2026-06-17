@@ -1,6 +1,6 @@
-# DESIGN.md — AgriTech Portfolio Design System
+# DESIGN.md — AgriNode Portfolio Design System
 
-**Brand:** AgriTech
+**Brand:** AgriNode
 **Owner:** Agrian Wahab
 **Konsep:** Premium dark portfolio dengan glassmorphism, subtle gradient, clean typography, dan cinematic GSAP motion.
 **Versi:** 1.0
@@ -268,4 +268,4 @@ Jika `prefers-reduced-motion: reduce`:
 
 ---
 
-**AgriTech Design System v1.0** — *Modern Web & Information Systems.*
+**AgriNode Design System v1.0** — *Modern Web & Intelligent Systems.*

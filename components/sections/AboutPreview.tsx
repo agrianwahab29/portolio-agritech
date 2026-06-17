@@ -16,7 +16,7 @@ export function AboutPreview() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-12">
           <FadeUp>
             <SectionHeading
-              eyebrow="About AgriTech"
+              eyebrow="About AgriNode"
               title="Membangun solusi digital yang rapi dan fungsional"
               description={profile.bio.substring(0, 240) + "..."}
             />

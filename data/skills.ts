@@ -61,15 +61,16 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "AI-Assisted Development",
-    description: "Memanfaatkan AI untuk produktivitas",
-    icon: "Sparkles",
+    title: "AI Agent Development",
+    description: "Membangun dan mengorkestrasi pipeline agent AI",
+    icon: "Bot",
     skills: [
-      "Vibe Coding (AI pair programming)",
+      "Agent Pipeline Design",
       "AI Agent Orchestration",
+      "RAG (Retrieval-Augmented Generation)",
+      "Multi-Agent Coordination",
       "Prompt Engineering",
-      "AI-Assisted Code Review",
-      "AI-Assisted Documentation",
+      "Documentation Automation",
     ],
   },
 ];

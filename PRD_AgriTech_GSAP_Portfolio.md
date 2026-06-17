@@ -1,8 +1,8 @@
-# PRD — AgriTech Interactive GSAP Portfolio (v2.0 ULTRA COMPLEX)
+# PRD — AgriNode Interactive GSAP Portfolio (v2.0 ULTRA COMPLEX)
 
-**Nama Produk:** AgriTech Portfolio
+**Nama Produk:** AgriNode Portfolio
 **Pemilik Produk:** Bos Agrian / Agrian Wahab
-**Brand:** AgriTech
+**Brand:** AgriNode
 **Jenis Produk:** Website portofolio personal-profesional dengan GSAP cinematic animation
 **Model Deploy:** Vercel-only, tanpa database, tanpa backend
 **Target Platform:** Web desktop, tablet, mobile
@@ -15,9 +15,9 @@
 
 ## 1. Ringkasan Eksekutif
 
-AgriTech Portfolio adalah website portofolio profesional milik **Agrian Wahab** yang dirancang untuk memperkuat personal branding sebagai **Web Developer, System Information Developer, UI/UX enthusiast, technical documentation builder, AI-assisted developer, dan fresh graduate Teknik Informatika dengan pengalaman proyek instansi pemerintah**.
+AgriNode Portfolio adalah website portofolio profesional milik **Agrian Wahab** yang dirancang untuk memperkuat personal branding sebagai **Web Developer, AI Agent Developer, UI/UX enthusiast, technical documentation builder, AI-assisted developer, dan fresh graduate Teknik Informatika dengan pengalaman proyek instansi pemerintah**.
 
-Website ini WAJIB terlihat premium, modern, cepat, mudah dibaca, dan BERBEDA dari portofolio biasa. Fokus utama bukan hanya menampilkan CV, tetapi membangun persepsi bahwa AgriTech mampu membangun produk web yang rapi, interaktif, terstruktur, dan siap dipresentasikan ke perusahaan.
+Website ini WAJIB terlihat premium, modern, cepat, mudah dibaca, dan BERBEDA dari portofolio biasa. Fokus utama bukan hanya menampilkan CV, tetapi membangun persepsi bahwa AgriNode mampu membangun produk web yang rapi, interaktif, terstruktur, dan siap dipresentasikan ke perusahaan.
 
 Website menggunakan konsep **static-first portfolio** yang di-deploy ke **Vercel**, tanpa database, tanpa admin panel, dan tanpa sistem login. Semua data portofolio disimpan dalam file lokal TypeScript. Konten detail proyek menggunakan MDX.
 
@@ -42,13 +42,13 @@ Bos Agrian memiliki profil yang kuat untuk ditampilkan dalam portofolio digital:
 
 Portofolio ini dibuat untuk menjawab kebutuhan utama:
 
-> Bagaimana membuat website personal yang terlihat serius, modern, dan meyakinkan perusahaan bahwa AgriTech bukan sekadar fresh graduate, tetapi calon talenta yang sudah punya bukti proyek nyata di instansi pemerintah?
+> Bagaimana membuat website personal yang terlihat serius, modern, dan meyakinkan perusahaan bahwa AgriNode bukan sekadar fresh graduate, tetapi calon talenta yang sudah punya bukti proyek nyata di instansi pemerintah?
 
 ---
 
 ## 3. Visi Produk
 
-> AgriTech menjadi etalase digital yang menunjukkan bahwa Agrian Wahab mampu membangun web modern, sistem informasi, dan produk digital yang rapi, fungsional, terdokumentasi, dan layak digunakan di lingkungan profesional.
+> AgriNode menjadi etalase digital yang menunjukkan bahwa Agrian Wahab mampu membangun web modern, sistem informasi, dan produk digital yang rapi, fungsional, terdokumentasi, dan layak digunakan di lingkungan profesional.
 
 ---
 
@@ -69,7 +69,7 @@ Portofolio ini dibuat untuk menjawab kebutuhan utama:
 
 ### 5.1 Tujuan Utama
 
-Membangun website portofolio profesional dengan brand **AgriTech** yang mampu menarik perhatian perusahaan, recruiter, klien, dan partner kerja dalam 5 detik pertama.
+Membangun website portofolio profesional dengan brand **AgriNode** yang mampu menarik perhatian perusahaan, recruiter, klien, dan partner kerja dalam 5 detik pertama.
 
 ### 5.2 Tujuan Karier
 
@@ -193,11 +193,11 @@ Website ini TIDAK bertujuan untuk:
 
 ### 8.1 Nama Brand
 
-**AgriTech**
+**AgriNode**
 
 ### 8.2 Brand Statement
 
-> AgriTech adalah personal technology brand milik Agrian Wahab yang berfokus pada pengembangan web, sistem informasi, UI/UX, dokumentasi teknis, optimasi performa, dan AI-assisted development untuk membangun solusi digital yang rapi, modern, dan bermanfaat.
+> AgriNode adalah personal technology brand milik Agrian Wahab yang berfokus pada pengembangan web, sistem informasi, AI agent development, UI/UX, dokumentasi teknis, optimasi performa, dan AI-assisted development untuk membangun solusi digital yang rapi, modern, dan bermanfaat.
 
 ### 8.3 Brand Personality
 
@@ -256,7 +256,7 @@ Website ini TIDAK bertujuan untuk:
 
 ### 9.3 Differentiator vs Fresh Graduate Lain
 
-| Aspek | Fresh Graduate Biasa | AgriTech |
+| Aspek | Fresh Graduate Biasa | AgriNode |
 |-------|---------------------|------------|
 | Proyek | Tugas kuliah lokal | 4 proyek live di domain pemerintah |
 | Pengalaman | Belum magang | Magang Nasional Kemenaker 6 bulan |
@@ -269,7 +269,7 @@ Website ini TIDAK bertujuan untuk:
 
 ## 10. Nilai Utama yang Harus Ditonjolkan
 
-Website harus menonjolkan bahwa AgriTech memiliki kekuatan pada:
+Website harus menonjolkan bahwa AgriNode memiliki kekuatan pada:
 
 1. **Pengembangan web modern** — Next.js, React, TypeScript, Tailwind.
 2. **Sistem informasi berbasis web** — SEPADAN, Inventaris Buku.
@@ -415,7 +415,7 @@ Hero (kesan pertama 5 detik)
 ### 13.1 Identitas Utama
 
 - **Nama lengkap:** Agrian Wahab
-- **Brand:** AgriTech
+- **Brand:** AgriNode
 - **Headline:** Web Developer & System Information Developer
 - **Headline EN:** Building modern web experiences, information systems, and AI-assisted digital solutions.
 - **Headline ID:** Membangun website modern, sistem informasi, dan solusi digital berbasis AI-assisted workflow.
@@ -862,7 +862,7 @@ Tampilkan yang paling relevan untuk recruiter teknis:
 6. Contact
 
 **Plus:**
-- Logo AgriTech (kiri, link ke Home)
+- Logo AgriNode (kiri, link ke Home)
 - Download CV button (kanan, primary CTA, selalu terlihat)
 
 **Behavior:**
@@ -872,7 +872,7 @@ Tampilkan yang paling relevan untuk recruiter teknis:
 4. Active section indicator (underline / glow).
 5. Smooth scroll untuk section di homepage.
 6. Tombol Download CV harus terlihat dengan kontras tinggi.
-7. Logo AgriTech klik = home.
+7. Logo AgriNode klik = home.
 
 ### 20.2 Mobile Navigation
 
@@ -888,7 +888,7 @@ Tampilkan yang paling relevan untuk recruiter teknis:
 ### 20.3 Navbar Animation (GSAP)
 
 **Sequence saat page load:**
-1. Logo AgriTech fade + slide dari kiri (0.6s).
+1. Logo AgriNode fade + slide dari kiri (0.6s).
 2. Menu items stagger fade (0.4s, stagger 0.08s).
 3. Download CV button scale dari 0.9 ke 1 (0.4s).
 
@@ -1088,7 +1088,7 @@ Sequence saat halaman pertama kali dibuka:
 |------|---------|-----------|----------|-------|------|
 | 1 | Background gradient | opacity 0 ke 1 | 1.2s | 0s | power2.out |
 | 2 | Radial glow overlays | scale 0.8 ke 1 + opacity | 1.0s | 0.2s | power2.out |
-| 3 | Badge AgriTech Portfolio | fadeUp 20px + opacity | 0.6s | 0.4s | power3.out |
+| 3 | Badge AgriNode Portfolio | fadeUp 20px + opacity | 0.6s | 0.4s | power3.out |
 | 4 | Nama Agrian Wahab | text reveal per-word | 0.8s | 0.7s | expo.out |
 | 5 | Headline subtitle | fadeUp 30px + opacity | 0.6s | 1.0s | power3.out |
 | 6 | Description paragraph | fadeUp 20px + opacity | 0.5s | 1.2s | power3.out |
@@ -1209,7 +1209,7 @@ Jika prefers-reduced-motion: reduce:
 ### 23.1 Home Page (/)
 
 **Hero Section:**
-- Badge: AgriTech Portfolio (chip dengan dot indicator)
+- Badge: AgriNode Portfolio (chip dengan dot indicator)
 - Heading: Agrian Wahab (display size, gradient text)
 - Subheading: Web Developer & System Information Developer
 - Description: 1-2 kalimat profesional
@@ -1231,14 +1231,14 @@ Jika prefers-reduced-motion: reduce:
 
 **About Preview:**
 - 2 kolom layout (text + visual)
-- Heading: About AgriTech
+- Heading: About AgriNode
 - Paragraf intro singkat
 - 3 highlight chips (Web Dev, Sistem Informasi, AI-Assisted)
 - CTA: Read more about me (link ke /about)
 
 **Featured Projects:**
 - Heading: Featured Projects
-- Subheading: Selected work from AgriTech
+- Subheading: Selected work from AgriNode
 - Grid 2 kolom desktop, 1 mobile
 - Card project (sesuai spec section 24)
 - 4 proyek: SEPADAN (highlighted), Portal Kamus, Kamus Bergambar, Inventaris Buku
@@ -1288,7 +1288,7 @@ Jika prefers-reduced-motion: reduce:
 - 3 button: Email, LinkedIn, WhatsApp
 
 **Footer:**
-- Brand AgriTech + tagline
+- Brand AgriNode + tagline
 - Quick links navigation
 - Social links
 - Copyright + Built with Next.js + GSAP
@@ -1538,7 +1538,7 @@ export type Social = {
 ## 26. Folder Structure
 
 ```txt
-AgriTech-portfolio/
+AgriNode-portfolio/
 ├── app/
 │   ├── layout.tsx
 │   ├── page.tsx
@@ -1650,25 +1650,25 @@ AgriTech-portfolio/
 
 **Title Template:**
 ```txt
-%s | AgriTech - Agrian Wahab
+%s | AgriNode - Agrian Wahab
 ```n
 **Default Title:**
 ```txt
-AgriTech - Agrian Wahab Portfolio
+AgriNode - Agrian Wahab Portfolio
 ```n
 **Description:**
 ```txt
-Portfolio resmi Agrian Wahab, Web Developer dan System Information Developer yang berfokus pada pengembangan web modern, sistem informasi, UI/UX, dokumentasi teknis, dan AI-assisted development.
+Portfolio resmi Agrian Wahab, Web Developer dan AI Agent Developer yang berfokus pada pengembangan web modern, sistem informasi, AI agent development, UI/UX, dokumentasi teknis, dan AI-assisted development.
 ```n
 **Keywords:**
 ```txt
-Agrian Wahab, AgriTech, Web Developer, Next.js Developer, React Developer, Portfolio Developer Indonesia, System Information Developer, UI UX, Technical Documentation, Fresh Graduate Teknik Informatika, Sulawesi Tenggara Developer
+Agrian Wahab, AgriNode, Web Developer, AI Agent Developer, Next.js Developer, React Developer, Portfolio Developer Indonesia, System Information Developer, UI UX, Technical Documentation, Fresh Graduate Teknik Informatika, Sulawesi Tenggara Developer
 ```n
 ### 27.2 Open Graph
 
-- og:title: AgriTech - Interactive Developer Portfolio
-- og:description: Explore web projects, system information projects, publications, and professional experience by Agrian Wahab.
-- og:image: /images/og/AgriTech-og.png (1200x630)
+- og:title: AgriNode - Interactive Developer Portfolio
+- og:description: Explore web projects, system information projects, AI agent pipelines, publications, and professional experience by Agrian Wahab.
+- og:image: /images/og/AgriNode-og.png (1200x630)
 - og:type: website
 - og:locale: id_ID
 
@@ -1683,11 +1683,11 @@ Agrian Wahab, AgriTech, Web Developer, Next.js Developer, React Developer, Portf
 
 Setiap halaman wajib punya metadata unik:
 - Home: Default site metadata
-- Projects: Projects | AgriTech
-- Project Detail: [Project Name] | AgriTech Case Study
-- About: About | AgriTech
-- Publications: Publications | AgriTech
-- Contact: Contact | AgriTech
+- Projects: Projects | AgriNode
+- Project Detail: [Project Name] | AgriNode Case Study
+- About: About | AgriNode
+- Publications: Publications | AgriNode
+- Contact: Contact | AgriNode
 
 ### 27.5 Technical SEO
 
@@ -1705,7 +1705,7 @@ Setiap halaman wajib punya metadata unik:
 
 Gunakan structured data untuk:
 - Person (Agrian Wahab)
-- Website (AgriTech Portfolio)
+- Website (AgriNode Portfolio)
 - CreativeWork (untuk publications)
 - BreadcrumbList (project detail)
 
@@ -1889,29 +1889,29 @@ Paling ahli, Master, Sangat jago, Hacker profesional, Dijamin sempurna, 100% ter
 ### 32.4 Hero Copy
 
 ```txt
-AgriTech Portfolio
+AgriNode Portfolio
 
 Agrian Wahab
-Web Developer & System Information Developer
+Web Developer & AI Agent Developer
 
-Saya membangun website modern, sistem informasi, dan solusi digital yang rapi, fungsional, terdokumentasi, dan mudah digunakan.
+Saya membangun website modern, sistem informasi, dan pipeline agent AI yang rapi, fungsional, terdokumentasi, dan production-ready.
 ```n
 ### 32.5 About Copy
 
 ```txt
-Saya adalah lulusan Teknik Informatika dengan fokus pada pengembangan web, sistem informasi, UI/UX, pengolahan data, jaringan komputer, dan kecerdasan buatan. Saya terbiasa mengerjakan proses pengembangan mulai dari analisis kebutuhan, perancangan antarmuka, implementasi fitur, testing, dokumentasi teknis, hingga optimasi performa.
+Saya adalah lulusan Teknik Informatika dengan fokus pada pengembangan web, sistem informasi, AI agent development, UI/UX, pengolahan data, jaringan komputer, dan kecerdasan buatan. Saya terbiasa mengerjakan proses pengembangan mulai dari analisis kebutuhan, perancangan antarmuka, implementasi fitur, testing, dokumentasi teknis, hingga optimasi performa.
 
-Melalui AgriTech, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
+Melalui AgriNode, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
 ```n
 ### 32.6 Services Copy
 
 ```txt
-Saya dapat membantu membangun website dan sistem digital seperti landing page, company profile, portfolio website, sistem informasi sederhana, UI/UX prototype, dokumentasi teknis, dan optimasi tampilan web.
+Saya dapat membantu membangun website dan sistem digital seperti landing page, company profile, portfolio website, sistem informasi, pipeline AI agent, UI/UX prototype, dokumentasi teknis, dan optimasi tampilan web.
 ```n
 ### 32.7 Contact Copy
 
 ```txt
-Tertarik bekerja sama, berdiskusi tentang peluang kerja, atau membangun sistem digital bersama AgriTech? Mari terhubung.
+Tertarik bekerja sama, berdiskusi tentang peluang kerja, atau membangun sistem digital bersama AgriNode? Mari terhubung.
 ```n
 ---
 
@@ -1946,7 +1946,7 @@ Tertarik bekerja sama, berdiskusi tentang peluang kerja, atau membangun sistem d
 **Example:**
 ```txt
 FEATURED PROJECTS
-Selected work from AgriTech
+Selected work from AgriNode
 Beberapa proyek web dan sistem informasi yang telah dibangun dan dipublikasikan.
 ```n
 ### 33.5 Container
@@ -1966,8 +1966,8 @@ Beberapa proyek web dan sistem informasi yang telah dibangun dan dipublikasikan.
 2. Project screenshots (4 proyek utama, 1600x900).
 3. OG image global (1200x630).
 4. Favicon (.ico + .png variants).
-5. Logo AgriTech wordmark (SVG).
-6. Logo monogram AT (SVG).
+5. Logo AgriNode wordmark (SVG).
+   6. Logo monogram AN (SVG).
 7. Apple touch icon (180x180).
 
 ### 34.2 Style Screenshot
@@ -1992,9 +1992,9 @@ Jika project belum punya screenshot:
 
 ### 35.1 Logo Variants
 
-1. Wordmark: `AgriTech` (font Plus Jakarta Sans Bold)
-2. Monogram: `AT` (geometric, untuk favicon)
-3. With tagline: AgriTech | Modern Web & Information Systems
+1. Wordmark: `AgriNode` (font Plus Jakarta Sans Bold)
+2. Monogram: `AN` (geometric, untuk favicon)
+3. With tagline: AgriNode | Modern Web & Intelligent Systems
 
 ### 35.2 Logo Style
 
@@ -2006,7 +2006,7 @@ Jika project belum punya screenshot:
 
 ### 35.3 Tagline Hierarchy
 
-**Primary:** Modern Web & Information Systems.
+**Primary:** Modern Web & Intelligent Systems.
 **Secondary:** Build. Design. Optimize.
 **Tertiary:** Digital Solutions with Purpose.
 
@@ -2103,7 +2103,7 @@ Jika project belum punya screenshot:
 Website dianggap SELESAI jika:
 
 1. Home page tampil rapi di desktop, tablet, dan mobile.
-2. Brand AgriTech terlihat jelas di hero dan navbar.
+2. Brand AgriNode terlihat jelas di hero dan navbar.
 3. GSAP animation berjalan smooth (60fps, no jank).
 4. Reduced motion didukung dan berfungsi.
 5. Semua 4 proyek utama tampil di homepage dan projects page.
@@ -2288,7 +2288,7 @@ English version, blog/notes, theme switch, custom domain, contact form integrati
 
 ## 44. Final Product Definition
 
-> Website portofolio interaktif berbasis Next.js, TypeScript, Tailwind CSS, dan GSAP untuk brand AgriTech milik Agrian Wahab, di-deploy ke Vercel tanpa database dan tanpa auth, menggunakan data lokal, memiliki halaman proyek dan case study cinematic, SEO-friendly, mobile-friendly, cepat, mudah diperbarui, accessible, dan terlihat profesional untuk dilirik perusahaan.
+> Website portofolio interaktif berbasis Next.js, TypeScript, Tailwind CSS, dan GSAP untuk brand AgriNode milik Agrian Wahab, di-deploy ke Vercel tanpa database dan tanpa auth, menggunakan data lokal, memiliki halaman proyek dan case study cinematic, AI agent showcase, SEO-friendly, mobile-friendly, cepat, mudah diperbarui, accessible, dan terlihat profesional untuk dilirik perusahaan.
 
 **Prioritas utama:**
 1. Recruiter paham siapa Agrian Wahab dalam 5 detik pertama.
@@ -2298,10 +2298,10 @@ English version, blog/notes, theme switch, custom domain, contact form integrati
 5. Struktur kode rapi dan mudah dirawat.
 6. Konten mudah diperbarui via file lokal.
 7. Tanpa database, tanpa auth, Vercel-only.
-8. Brand AgriTech terlihat jelas dan profesional.
+8. Brand AgriNode terlihat jelas dan profesional.
 
 ---
 
-**Disusun untuk Bos Agrian (Agrian Wahab) | AgriTech | v2.0 ULTRA COMPLEX**
+**Disusun untuk Bos Agrian (Agrian Wahab) | AgriNode | v2.0 ULTRA COMPLEX**
 
 *Modern Web & Information Systems.*

@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Hubungi Agrian Wahab (AgriTech) untuk peluang kerja, kolaborasi, atau pembuatan sistem digital.",
+    "Hubungi Agrian Wahab (AgriNode) untuk peluang kerja, kolaborasi, atau pembuatan sistem digital.",
 };
 
 const iconMap: Record<string, LucideIcon> = {
