@@ -25,18 +25,22 @@ export function FadeUp({ children, className, delay = 0, y = 40 }: FadeUpProps) 
         return;
       }
 
-      gsap.from(el, {
-        opacity: 0,
-        y,
-        duration: 0.8,
-        delay,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          once: true,
-        },
-      });
+      gsap.fromTo(
+        el,
+        { opacity: 0, y },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            once: true,
+          },
+        }
+      );
     },
     { scope: ref },
   );

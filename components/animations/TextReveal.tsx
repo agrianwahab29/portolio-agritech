@@ -25,20 +25,24 @@ export function TextReveal({ children, className, delay = 0 }: TextRevealProps) 
       }
 
       const words = el.querySelectorAll("[data-word]");
-      gsap.from(words, {
-        opacity: 0,
-        y: 20,
-        rotateX: 40,
-        duration: 0.6,
-        ease: "expo.out",
-        stagger: 0.06,
-        delay,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          once: true,
-        },
-      });
+      gsap.fromTo(
+        words,
+        { opacity: 0, y: 20, rotateX: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          rotateX: 0,
+          duration: 0.6,
+          ease: "expo.out",
+          stagger: 0.06,
+          delay,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            once: true,
+          },
+        }
+      );
     },
     { scope: ref },
   );

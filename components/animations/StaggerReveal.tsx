@@ -32,19 +32,23 @@ export function StaggerReveal({
         return;
       }
 
-      gsap.from(items, {
-        opacity: 0,
-        y: 30,
-        scale: 0.96,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",
-          once: true,
-        },
-      });
+      gsap.fromTo(
+        items,
+        { opacity: 0, y: 30, scale: 0.96 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "power3.out",
+          stagger,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
     },
     { scope: ref },
   );

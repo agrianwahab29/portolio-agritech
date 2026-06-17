@@ -8,6 +8,7 @@ const iconMap = { Mail, Linkedin, MessageCircle, Github };
 
 const navLinks = [
   { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Publications", href: "/publications" },
   { label: "Contact", href: "/contact" },

@@ -12,6 +12,7 @@ import { profile } from "@/data/profile";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Publications", href: "/publications" },
   { label: "Contact", href: "/contact" },
