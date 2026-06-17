@@ -80,7 +80,7 @@ export function AgentShowcase() {
     <Section
       ref={scopeRef}
       id="agents"
-      size="lg"
+      size="md"
       className="relative overflow-hidden"
     >
       {/* Subtle background accent */}
@@ -123,7 +123,7 @@ export function AgentShowcase() {
         </div>
 
         {/* Pipeline layer chips — horizontal timeline */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
           {agentPipelineStats.layers.map((layer) => {
             const Icon = layerIcons[layer.layer] || Layers;
             return (
@@ -146,7 +146,7 @@ export function AgentShowcase() {
         </div>
 
         {/* ─── Block 2: Agent Grid (dense) ─── */}
-        <div className="mt-10">
+        <div className="mt-8">
           <h3 className="mb-4 font-heading text-base font-semibold text-fg-primary">
             Core Agents
           </h3>
@@ -224,8 +224,8 @@ export function AgentShowcase() {
         </div>
 
         {/* ─── Block 3: CTA ─── */}
-        <div data-agent="cta" className="mt-10 text-center">
-          <div className="inline-flex flex-col items-center gap-3 glass rounded-card border border-brand/20 p-6">
+        <div data-agent="cta" className="mt-8 text-center">
+          <div className="inline-flex flex-col items-center gap-3 glass rounded-card border border-brand/20 p-5">
             <div className="flex items-center gap-2">
               <Github size={18} className="text-brand" />
               <span className="font-heading text-lg font-bold text-fg-primary">
