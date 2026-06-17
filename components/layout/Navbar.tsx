@@ -49,17 +49,15 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="flex items-center gap-3 transition-opacity hover:opacity-80"
+          className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
         >
-          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface/30 p-1 border border-line/40 backdrop-blur-sm">
-            <Image
-              src="/images/brand/logo.png"
-              alt={`${profile.brand} Logo`}
-              width={40}
-              height={40}
-              className="h-full w-auto object-contain transition-all dark:brightness-150 dark:saturate-150"
-            />
-          </div>
+          <Image
+            src="/images/brand/logo.png"
+            alt={`${profile.brand} Logo`}
+            width={44}
+            height={44}
+            className="h-11 w-auto object-contain transition-all dark:brightness-125 dark:saturate-150"
+          />
           <span className="font-heading text-lg font-bold tracking-tight text-fg-primary md:text-xl">
             {profile.brand}
           </span>
