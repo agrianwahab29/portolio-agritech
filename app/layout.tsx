@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
+  icons: {
+    icon: "/images/brand/logo.png",
+    shortcut: "/images/brand/logo.png",
+    apple: "/images/brand/logo.png",
+  },
   robots: { index: true, follow: true },
 };
 
