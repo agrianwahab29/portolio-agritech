@@ -28,59 +28,58 @@ export default function AboutPage() {
       <Navbar />
       <Section size="lg" className="pt-28">
         <Container>
-          {/* Main Layout: Bio on left, Education & Values on right */}
-          <div className="mb-16 grid gap-12 lg:grid-cols-12 lg:items-start">
-            {/* Left Column: Bio & Mission */}
-            <FadeUp className="lg:col-span-7 space-y-6">
-              <SectionHeading
-                eyebrow="About AgriNode"
-                title={profile.name}
-                description={profile.headline}
-              />
-              <p className="text-base leading-relaxed text-fg-secondary text-justify md:text-lg">
-                {profile.bio}
-              </p>
-              <p className="text-base leading-relaxed text-fg-secondary text-justify md:text-lg">
-                Melalui AgriNode, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
-              </p>
+          {/* Top Section: Bio & Mission (Centered max-width, justified text) */}
+          <FadeUp className="mb-12 max-w-4xl mx-auto space-y-6">
+            <SectionHeading
+              eyebrow="About AgriNode"
+              title={profile.name}
+              description={profile.headline}
+            />
+            <p className="text-base leading-relaxed text-fg-secondary text-justify md:text-lg">
+              {profile.bio}
+            </p>
+            <p className="text-base leading-relaxed text-fg-secondary text-justify md:text-lg">
+              Melalui AgriNode, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
+            </p>
+          </FadeUp>
+
+          {/* Grid Section: Education & Values (Side-by-side below the bio) */}
+          <div className="mb-16 max-w-4xl mx-auto grid gap-6 md:grid-cols-2 md:items-stretch">
+            {/* Left Column: Education */}
+            <FadeUp className="h-full">
+              <div className="glass rounded-card p-6 h-full flex flex-col justify-between border border-line">
+                <div className="space-y-3">
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted font-semibold">Education</p>
+                  <h3 className="font-heading text-lg font-bold text-fg-primary leading-snug">
+                    {profile.education.degree}
+                  </h3>
+                  <p className="text-fg-secondary text-sm">{profile.education.university}</p>
+                  <p className="text-sm text-fg-muted">
+                    {profile.education.period} · GPA {profile.education.gpa}
+                  </p>
+                </div>
+                {profile.education.concentration && (
+                  <p className="mt-4 text-sm text-fg-muted border-t border-line/50 pt-3">
+                    Konsentrasi: <span className="text-fg-secondary font-medium">{profile.education.concentration}</span>
+                  </p>
+                )}
+              </div>
             </FadeUp>
 
-            {/* Right Column: Education & Values */}
-            <div className="lg:col-span-5 space-y-6">
-              <FadeUp delay={0.1}>
-                <div className="glass rounded-card p-6 flex flex-col border border-line">
-                  <div className="space-y-3">
-                    <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted font-semibold">Education</p>
-                    <h3 className="font-heading text-lg font-bold text-fg-primary leading-snug">
-                      {profile.education.degree}
-                    </h3>
-                    <p className="text-fg-secondary text-sm">{profile.education.university}</p>
-                    <p className="text-sm text-fg-muted">
-                      {profile.education.period} · GPA {profile.education.gpa}
-                    </p>
-                  </div>
-                  {profile.education.concentration && (
-                    <p className="mt-4 text-sm text-fg-muted border-t border-line/50 pt-3">
-                      Konsentrasi: <span className="text-fg-secondary font-medium">{profile.education.concentration}</span>
-                    </p>
-                  )}
-                </div>
-              </FadeUp>
-
-              <FadeUp delay={0.2}>
-                <div className="glass rounded-card p-6 space-y-4 border border-line">
-                  <h3 className="font-heading text-lg font-bold text-fg-primary">Values</h3>
-                  <ul className="space-y-3">
-                    {values.map((v) => (
-                      <li key={v} className="flex gap-2.5 text-sm text-fg-secondary">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-strong" />
-                        <span>{v}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </FadeUp>
-            </div>
+            {/* Right Column: Values */}
+            <FadeUp className="h-full">
+              <div className="glass rounded-card p-6 h-full space-y-4 border border-line">
+                <h3 className="font-heading text-lg font-bold text-fg-primary">Values</h3>
+                <ul className="space-y-3">
+                  {values.map((v) => (
+                    <li key={v} className="flex gap-2.5 text-sm text-fg-secondary">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-strong" />
+                      <span>{v}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeUp>
           </div>
 
           <div className="mb-12 space-y-5">
