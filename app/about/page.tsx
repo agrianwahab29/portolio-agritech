@@ -28,47 +28,57 @@ export default function AboutPage() {
       <Navbar />
       <Section size="lg" className="pt-28">
         <Container>
-          <FadeUp className="mb-12 max-w-3xl space-y-5">
-            <SectionHeading
-              eyebrow="About AgriNode"
-              title={profile.name}
-              description={profile.headline}
-            />
-            <p className="text-base leading-relaxed text-fg-secondary text-pretty md:text-lg">
-              {profile.bio}
-            </p>
-            <p className="text-base leading-relaxed text-fg-secondary text-pretty md:text-lg">
-              Melalui AgriNode, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
-            </p>
-          </FadeUp>
-
-          <FadeUp className="mb-12">
-            <div className="glass max-w-xl rounded-card p-6 space-y-1.5">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted">Education</p>
-              <h3 className="font-heading text-lg font-bold text-fg-primary">
-                {profile.education.degree}
-              </h3>
-              <p className="text-fg-secondary">{profile.education.university}</p>
-              <p className="text-sm text-fg-muted">
-                {profile.education.period} · GPA {profile.education.gpa}
-              </p>
-              {profile.education.concentration && (
-                <p className="mt-1 text-sm text-fg-muted">Konsentrasi: {profile.education.concentration}</p>
-              )}
+          <div className="mb-16 grid gap-10 lg:grid-cols-12 lg:gap-12 lg:items-start">
+            {/* Left Column: Bio & Mission */}
+            <div className="lg:col-span-7 space-y-6">
+              <FadeUp className="space-y-5">
+                <SectionHeading
+                  eyebrow="About AgriNode"
+                  title={profile.name}
+                  description={profile.headline}
+                />
+                <p className="text-base leading-relaxed text-fg-secondary text-pretty md:text-lg">
+                  {profile.bio}
+                </p>
+                <p className="text-base leading-relaxed text-fg-secondary text-pretty md:text-lg">
+                  Melalui AgriNode, saya ingin membangun solusi digital yang tidak hanya terlihat modern, tetapi juga memiliki struktur, fungsi, dan pengalaman pengguna yang baik.
+                </p>
+              </FadeUp>
             </div>
-          </FadeUp>
 
-          <FadeUp className="mb-12 space-y-4">
-            <h2 className="font-heading text-xl font-bold text-fg-primary md:text-2xl">Values</h2>
-            <ul className="space-y-2.5">
-              {values.map((v) => (
-                <li key={v} className="flex gap-2.5 text-fg-secondary">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-strong" />
-                  {v}
-                </li>
-              ))}
-            </ul>
-          </FadeUp>
+            {/* Right Column: Education & Values */}
+            <div className="lg:col-span-5 space-y-8">
+              <FadeUp>
+                <div className="glass rounded-card p-6 space-y-2 border border-line">
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-fg-muted font-semibold">Education</p>
+                  <h3 className="font-heading text-lg font-bold text-fg-primary leading-snug">
+                    {profile.education.degree}
+                  </h3>
+                  <p className="text-fg-secondary text-sm">{profile.education.university}</p>
+                  <p className="text-sm text-fg-muted">
+                    {profile.education.period} · GPA {profile.education.gpa}
+                  </p>
+                  {profile.education.concentration && (
+                    <p className="mt-1 text-sm text-fg-muted border-t border-line/50 pt-2">
+                      Konsentrasi: <span className="text-fg-secondary font-medium">{profile.education.concentration}</span>
+                    </p>
+                  )}
+                </div>
+              </FadeUp>
+
+              <FadeUp className="space-y-4">
+                <h2 className="font-heading text-xl font-bold text-fg-primary md:text-2xl">Values</h2>
+                <ul className="space-y-3">
+                  {values.map((v) => (
+                    <li key={v} className="flex gap-2.5 text-fg-secondary">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-strong" />
+                      {v}
+                    </li>
+                  ))}
+                </ul>
+              </FadeUp>
+            </div>
+          </div>
 
           <div className="mb-12 space-y-5">
             <h2 className="font-heading text-xl font-bold text-fg-primary md:text-2xl">
